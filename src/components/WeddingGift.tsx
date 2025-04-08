@@ -45,80 +45,78 @@ export default function WeddingGift() {
   ];
 
   return (
-    <div className="bg-white py-4 shadow-sm">
+    <section id="gift" className="py-20 bg-gradient-to-b from-white to-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col items-center"
+          className="text-center mb-16"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center mb-8 md:mb-16"
-          >
-            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 md:mb-4">
-              Mừng cưới
-            </h2>
-            <p className="font-cormorant text-lg sm:text-xl text-gray-600">
-              Gửi mừng cưới đến cô dâu, chú rễ
-            </p>
-          </motion.div>
-
-          <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
-            {qrCodes.map((item, index) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 + index * 0.2 }}
-                className="flex flex-col items-center w-full md:w-auto"
-              >
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setSelectedQR(item)}
-                  className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-lg overflow-hidden hover:opacity-90 transition-opacity"
-                >
-                  <Image
-                    src={item.qrCode}
-                    alt={`QR Code for ${item.name}`}
-                    fill
-                    className="object-cover"
-                  />
-                </motion.button>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.6 + index * 0.2 }}
-                  className="mt-4 text-center w-full max-w-xs"
-                >
-                  <p className="font-playfair text-xl font-bold text-primary-600 mb-2">
-                    {item.name}
-                  </p>
-                  <p className="font-medium text-gray-900 text-sm sm:text-base">
-                    {item.bankInfo.accountName}
-                  </p>
-                  <p className="font-medium text-gray-900 text-sm sm:text-base">
-                    {item.bankInfo.accountNumber}
-                  </p>
-                  <p className="font-medium text-gray-900 text-sm sm:text-base">
-                    {item.bankInfo.bankName}
-                  </p>
-                  <p className="font-medium text-gray-900 text-sm sm:text-base">
-                    {item.bankInfo.branch}
-                  </p>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Mừng Cưới
+          </h2>
+          <p className="font-cormorant text-xl text-gray-600">
+            Gửi mừng cưới đến cô dâu, chú rể
+          </p>
         </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {qrCodes.map((item, index) => (
+            <motion.div
+              key={item.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+            >
+              <div className="p-6">
+                <div className="flex flex-col items-center">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => setSelectedQR(item)}
+                    className="relative w-64 h-64 rounded-lg overflow-hidden shadow-md mb-6"
+                  >
+                    <Image
+                      src={item.qrCode}
+                      alt={`QR Code for ${item.name}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </motion.button>
+
+                  <div className="text-center space-y-4">
+                    <h3 className="font-playfair text-2xl font-bold text-pink-600">
+                      {item.name}
+                    </h3>
+                    
+                    <div className="space-y-2 text-gray-700">
+                      <div className="flex items-center justify-center space-x-2">
+                        <span className="font-medium">Tên tài khoản:</span>
+                        <span>{item.bankInfo.accountName}</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <span className="font-medium">Số tài khoản:</span>
+                        <span className="font-mono">{item.bankInfo.accountNumber}</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <span className="font-medium">Ngân hàng:</span>
+                        <span>{item.bankInfo.bankName}</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <span className="font-medium">Chi nhánh:</span>
+                        <span>{item.bankInfo.branch}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
       {selectedQR && (
@@ -129,6 +127,6 @@ export default function WeddingGift() {
           name={selectedQR.name}
         />
       )}
-    </div>
+    </section>
   );
 }

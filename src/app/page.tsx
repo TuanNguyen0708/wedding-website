@@ -5,12 +5,12 @@ import WeddingDetails from '@/components/WeddingDetails';
 import Gallery from '@/components/Gallery';
 import RSVPForm from '@/components/RSVPForm';
 import Footer from '@/components/Footer';
-import FlowerAnimation from '@/components/FlowerAnimation';
+import HeartAnimation from '@/components/HeartAnimation';
 
 export default function Home() {
   return (
     <main className="relative">
-      <FlowerAnimation />
+      <HeartAnimation />
       <Header />
       <Hero />
       <OurStory />

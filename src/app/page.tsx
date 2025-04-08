@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import HeartAnimation from '@/components/HeartAnimation';
 import AttendanceForm from '@/components/AttendanceForm';
 import GuestbookForm from '@/components/GuestbookForm';
+import WeddingGift from '@/components/WeddingGift';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Gallery />
       <AttendanceForm />
       <GuestbookForm />
+      <WeddingGift />
       <Footer />
     </main>
   );

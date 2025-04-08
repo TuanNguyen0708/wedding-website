@@ -8,21 +8,21 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 const events = [
   {
     title: 'Lễ Thành Hôn',
-    date: '15/12/2024',
+    date: '06/07/2025',
     time: '10:00 AM',
-    location: 'Nhà thờ Đức Bà Sài Gòn',
-    address: '01 Công xã Paris, Bến Nghé, Quận 1, TP.HCM',
-    description: 'Chúng tôi sẽ tổ chức lễ thành hôn tại nhà thờ Đức Bà Sài Gòn, nơi chúng tôi đã gặp nhau lần đầu tiên.',
-    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.424314981505!2d106.6999929!3d10.7797385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4b7b1d3c3d%3A0x2c1c3e1e3e3e3e3e!2sNh%C3%A0%20th%E1%BB%9D%20%C4%90%E1%BB%A9c%20B%C3%A0%20S%C3%A0i%20G%C3%B2n!5e0!3m2!1svi!2s!4v1620000000000!5m2!1svi!2s',
+    location: 'Nhà Trai',
+    address: 'Thôn Trung Phú 1, Phường Điện Minh, Thị Xã Điện Bàn, Tỉnh Quảng Nam',
+    description: 'Chúng tôi sẽ tổ chức lễ thành hôn tại nhà trai',
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d959.3592949726841!2d108.25823126962045!3d15.886151288932771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1svi!2s!4v1744119410725!5m2!1svi!2s',
   },
   {
     title: 'Tiệc Cưới',
-    date: '15/12/2024',
-    time: '6:00 PM',
-    location: 'Khách sạn Rex',
-    address: '141 Nguyễn Huệ, Bến Nghé, Quận 1, TP.HCM',
-    description: 'Tiệc cưới sẽ được tổ chức tại khách sạn Rex với không gian sang trọng và ấm cúng.',
-    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.424314981505!2d106.6999929!3d10.7797385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4b7b1d3c3d%3A0x2c1c3e1e3e3e3e3e!2sKh%C3%A1ch%20s%E1%BA%A1n%20Rex!5e0!3m2!1svi!2s!4v1620000000000!5m2!1svi!2s',
+    date: '06/07/2025',
+    time: '12:00 PM',
+    location: 'Nhà Hàng Tiệc Cưới Happy Palace',
+    address: 'Đường Phan Khôi, TT. Vĩnh Điện, Thị Xã Điện Bàn, Tỉnh Quảng Nam',
+    description: 'Tiệc cưới sẽ được tổ chức tại Nhà Hàng Tiệc Cưới Happy Palace',
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d538.403683055102!2d108.24017289013838!3d15.893076186827377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31420f88809385b7%3A0xa61a7c04590ced3d!2zTmjDoCBIw6BuZyBUaeG7h2MgQ8aw4bubaSBIYXBweSBQYWxhY2U!5e0!3m2!1svi!2s!4v1744119105664!5m2!1svi!2s',
   },
 ];
 

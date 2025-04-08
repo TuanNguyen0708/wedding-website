@@ -11,7 +11,6 @@ interface Heart {
   duration: number;
   scale: number;
   rotation: number;
-  direction: 'up' | 'down';
 }
 
 export default function HeartAnimation() {
@@ -20,7 +19,7 @@ export default function HeartAnimation() {
 
   useEffect(() => {
     // Create initial hearts
-    const initialHearts = Array.from({ length: 20 }, (_, i) => createHeart(i, scrollDirection));
+    const initialHearts = Array.from({ length: 20 }, (_, i) => createHeart(i));
     setHearts(initialHearts);
 
     // Add new hearts periodically
@@ -28,15 +27,15 @@ export default function HeartAnimation() {
       setHearts(currentHearts => {
         const newHearts = currentHearts
           .filter(heart => heart.id < Date.now())
-          .concat(createHeart(Date.now(), scrollDirection));
+          .concat(createHeart(Date.now()));
         return newHearts.slice(-20);
       });
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [scrollDirection]);
+  }, []);
 
-  function createHeart(id: number, direction: 'up' | 'down'): Heart {
+  function createHeart(id: number): Heart {
     return {
       id,
       x: Math.random() * window.innerWidth,
@@ -44,7 +43,6 @@ export default function HeartAnimation() {
       duration: 15 + Math.random() * 10,
       scale: 0.4 + Math.random() * 0.6,
       rotation: Math.random() * 30 - 15,
-      direction,
     };
   }
 
@@ -57,16 +55,14 @@ export default function HeartAnimation() {
             initial={{
               opacity: 0,
               x: heart.x,
-              y: heart.direction === 'down' ? -50 : window.innerHeight + 50,
+              y: -50,
               rotate: heart.rotation,
               scale: heart.scale,
             }}
             animate={{
               opacity: [0, 1, 1, 0],
               x: [heart.x, heart.x + Math.sin(heart.id) * 100],
-              y: heart.direction === 'down' 
-                ? ['0vh', '100vh']
-                : ['100vh', '0vh'],
+              y: ['0vh', '100vh'],
               rotate: [heart.rotation, heart.rotation + 15],
             }}
             transition={{

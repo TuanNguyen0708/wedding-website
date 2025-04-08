@@ -32,7 +32,7 @@ export default function Footer() {
             className="text-center md:text-left"
           >
             <h3 className="font-playfair text-2xl font-bold mb-4">
-              Đình Tuấn & Thị Lý
+            T & L
             </h3>
             <p className="text-gray-400">
               Chúng tôi rất mong được gặp bạn trong ngày trọng đại của chúng tôi.
@@ -95,7 +95,7 @@ export default function Footer() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400"
         >
-          <p>&copy; 2024 Đình Tuấn & Thị Lý. All rights reserved.</p>
+          <p>&copy; 2024 T & L. All rights reserved.</p>
         </motion.div>
       </div>
 

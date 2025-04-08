@@ -13,8 +13,8 @@ const cormorant = Cormorant({
 });
 
 export const metadata: Metadata = {
-  title: "Đình Tuấn & Thị Lý - Wedding",
-  description: "Wedding website for Đình Tuấn & Thị Lý",
+  title: "T & L - Wedding",
+  description: "Wedding website for T & L",
 };
 
 export default function RootLayout({

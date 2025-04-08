@@ -6,6 +6,8 @@ import Gallery from '@/components/Gallery';
 import RSVPForm from '@/components/RSVPForm';
 import Footer from '@/components/Footer';
 import HeartAnimation from '@/components/HeartAnimation';
+import AttendanceForm from '@/components/AttendanceForm';
+import GuestbookForm from '@/components/GuestbookForm';
 
 export default function Home() {
   return (
@@ -16,7 +18,8 @@ export default function Home() {
       <OurStory />
       <WeddingDetails />
       <Gallery />
-      <RSVPForm />
+      <AttendanceForm />
+      <GuestbookForm />
       <Footer />
     </main>
   );

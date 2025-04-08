@@ -56,11 +56,11 @@ export default function Countdown() {
       transition={{ duration: 0.8, delay: 0.4 }}
       className="w-full max-w-2xl mx-auto px-4"
     >
-      <div className="grid grid-cols-4 gap-2 sm:gap-4">
+      <div className="grid grid-cols-4 gap-4 sm:gap-6 md:gap-8">
         {timeUnits.map((unit, index) => (
           <div key={unit.label} className="text-center">
-            <div className="relative aspect-square w-full max-w-[60px] sm:max-w-[80px] mx-auto mb-2">
-              <div className="absolute inset-0 bg-white/10 rounded-lg shadow-lg backdrop-blur-sm" />
+            <div className="relative aspect-square w-full max-w-[100px] sm:max-w-[150px] lg:max-w-[180px] mx-auto mb-2 p-4 sm:p-6">
+              <div className="absolute inset-0" />
               <AnimatePresence mode="wait">
                 <motion.div
                   key={unit.value}
@@ -70,7 +70,7 @@ export default function Countdown() {
                   transition={{ duration: 0.3 }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
-                  <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+                  <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
                     {unit.value.toString().padStart(2, '0')}
                   </span>
                 </motion.div>

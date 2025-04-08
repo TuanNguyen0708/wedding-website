@@ -8,7 +8,7 @@ export default function Hero() {
   const { scrollDirection } = useScrollAnimation();
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 z-0">
         <motion.div
@@ -24,7 +24,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4">
+      <div className="relative z-10 text-center text-white">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

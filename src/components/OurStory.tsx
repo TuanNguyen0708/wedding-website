@@ -36,7 +36,7 @@ export default function OurStory() {
   const { scrollDirection } = useScrollAnimation();
 
   return (
-    <section id="story" className="py-20 bg-gray-50">
+    <section id="story" className="py-20 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -95,10 +95,10 @@ function TimelineItem({ item, index, scrollDirection }: {
       transition={{ duration: 0.8, delay: index * 0.2 }}
       className={`relative flex items-center ${
         index % 2 === 0 ? 'justify-start' : 'justify-end'
-      }`}
+      } w-full`}
     >
       <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden transform-gpu">
           <div className="relative h-48">
             <Image
               src={item.image}

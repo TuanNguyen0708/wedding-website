@@ -3,7 +3,6 @@ import Hero from '@/components/Hero';
 import OurStory from '@/components/OurStory';
 import WeddingDetails from '@/components/WeddingDetails';
 import Gallery from '@/components/Gallery';
-import RSVPForm from '@/components/RSVPForm';
 import Footer from '@/components/Footer';
 import HeartAnimation from '@/components/HeartAnimation';
 import AttendanceForm from '@/components/AttendanceForm';

@@ -50,7 +50,7 @@ export default function GuestbookForm() {
   };
 
   return (
-    <section id="guestbook" className="py-20 bg-white">
+    <section id="guestbook" className="py-20 bg-gray-50 overflow-hidden transform-gpu">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -148,7 +148,7 @@ export default function GuestbookForm() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-white p-6 rounded-lg shadow-sm overflow-y-auto max-h-[600px]"
+            className="bg-white p-6 rounded-lg shadow-sm overflow-y-auto max-h-[600px] transform-gpu"
           >
             <h3 className="text-xl font-semibold text-gray-900 mb-6">Lời chúc mừng</h3>
             <div className="space-y-6">

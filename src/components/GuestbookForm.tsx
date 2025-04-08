@@ -17,6 +17,8 @@ export default function GuestbookForm() {
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
   const { submitMessage, loading: guestbookLoading, error: guestbookError, messages } = useGuestbook();
 
+  console.log(messages);
+
   const {
     register,
     handleSubmit,
@@ -157,7 +159,7 @@ export default function GuestbookForm() {
                   <div className="flex items-center justify-between mb-2">
                     <h4 className="font-medium text-gray-900">{message.name}</h4>
                     <span className="text-sm text-gray-500">
-                      {/* {message.timestamp?.toLocaleDateString('vi-VN')} */}
+                    {message.timestamp ? message.timestamp.toDate().toLocaleString() : ''}
                     </span>
                   </div>
                   <p className="text-gray-600">{message.message}</p>

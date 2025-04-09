@@ -36,29 +36,29 @@ export default function OurStory() {
   const { scrollDirection } = useScrollAnimation();
 
   return (
-    <section id="story" className="py-20 bg-gray-50 overflow-hidden">
+    <section id="story" className="py-12 md:py-20 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="font-playfair text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             Câu Chuyện Của Chúng Tôi
           </h2>
-          <p className="font-cormorant text-xl text-gray-600">
+          <p className="font-cormorant text-lg md:text-xl text-gray-600">
             Hành trình yêu thương của chúng tôi
           </p>
         </motion.div>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200 hidden md:block" />
 
           {/* Timeline items */}
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-16">
             {timeline.map((item, index) => (
               <TimelineItem
                 key={index}
@@ -84,37 +84,40 @@ function TimelineItem({ item, index, scrollDirection }: {
     threshold: 0.1,
   });
 
-  const initialX = index % 2 === 0 ? 50 : -50;
+  const isEven = index % 2 === 0;
+  const initialX = isEven ? 100 : -100;
   const animateX = scrollDirection === 'down' ? 0 : initialX;
 
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, x: initialX }}
-      animate={inView ? { opacity: 1, x: animateX } : {}}
+      animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.8, delay: index * 0.2 }}
-      className={`relative flex items-center ${
-        index % 2 === 0 ? 'justify-start' : 'justify-end'
-      } w-full`}
+      className="relative w-full"
     >
-      <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden transform-gpu">
-          <div className="relative h-48">
+      <div className={`w-full md:w-5/12 ${isEven ? 'md:ml-auto md:mr-8' : 'md:mr-auto md:ml-8'}`}>
+        <motion.div 
+          className="bg-white rounded-lg shadow-lg overflow-hidden transform-gpu hover:shadow-xl transition-shadow duration-300"
+          whileHover={{ scale: 1.02 }}
+        >
+          <div className="relative h-48 md:h-64">
             <Image
               src={item.image}
               alt={item.title}
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 45vw"
             />
           </div>
-          <div className="p-6">
+          <div className="p-4 md:p-6">
             <p className="text-sm text-gray-500 mb-2">{item.date}</p>
-            <h3 className="font-playfair text-xl font-bold text-gray-900 mb-2">
+            <h3 className="font-playfair text-lg md:text-2xl font-bold text-gray-900 mb-2">
               {item.title}
             </h3>
-            <p className="text-gray-600">{item.description}</p>
+            <p className="text-gray-600 text-sm md:text-base">{item.description}</p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );

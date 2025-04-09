@@ -32,7 +32,9 @@ export default function Header() {
           <div className="flex justify-between items-center py-4">
             <Link
               href="/"
-              className="text-2xl font-playfair font-bold text-primary-600"
+              className={`text-2xl font-playfair font-bold ${
+                scrollY > 50 ? "text-pink-500" : "text-white"
+              }`}
             >
               T & L
             </Link>
@@ -45,7 +47,7 @@ export default function Header() {
                   href={item.href}
                   className={`text-sm font-medium transition-colors ${
                     scrollY > 50
-                      ? "text-gray-900 hover:text-primary-600"
+                      ? "text-gray-900 hover:text-pink-500"
                       : "text-white hover:text-primary-200"
                   }`}
                 >
@@ -56,7 +58,9 @@ export default function Header() {
 
             {/* Mobile Navigation Button */}
             <button
-              className="md:hidden text-gray-900"
+              className={`md:hidden ${
+                scrollY > 50 ? "text-gray-900" : "text-white"
+              }`}
               onClick={() => setIsOpen(!isOpen)}
             >
               <svg
@@ -93,14 +97,22 @@ export default function Header() {
                 : { opacity: 0, height: 0 }
             }
             transition={{ duration: 0.3 }}
-            className="md:hidden"
+            className={`md:hidden ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
           >
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className={`px-2 pt-2 pb-3 space-y-1 ${
+              scrollY > 50 ? 'bg-white' : 'bg-transparent'
+            }`}>
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                    scrollY > 50 
+                      ? 'text-gray-900 hover:text-pink-500' 
+                      : 'text-white hover:text-primary-200'
+                  } ${
+                    isOpen ? 'pointer-events-auto' : 'pointer-events-none'
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}

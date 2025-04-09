@@ -45,7 +45,7 @@ export default function OurStory() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="font-playfair text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="font-great-vibes text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             Câu Chuyện Của Chúng Tôi
           </h2>
           <p className="font-cormorant text-lg md:text-xl text-gray-600">

@@ -39,7 +39,7 @@ export default function WeddingDetails() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="font-great-vibes text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Thông Tin Lễ Cưới
           </h2>
           <p className="font-cormorant text-xl text-gray-600">

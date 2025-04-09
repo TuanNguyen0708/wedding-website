@@ -16,7 +16,7 @@ export default function Countdown() {
     seconds: 0
   });
 
-  const [prevTime, setPrevTime] = useState({
+  const [_, setPrevTime] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
@@ -57,7 +57,7 @@ export default function Countdown() {
       className="w-full max-w-2xl mx-auto px-4"
     >
       <div className="grid grid-cols-4 gap-4 sm:gap-6">
-        {timeUnits.map((unit, index) => (
+        {timeUnits.map((unit) => (
           <div key={unit.label} className="text-center">
             <div className="relative bg-black/40  rounded-sm aspect-square w-full max-w-[100px] sm:max-w-[120px] mx-auto mb-2">
               <AnimatePresence mode="wait">

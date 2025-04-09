@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Cormorant, Great_Vibes } from "next/font/google";
+import { Playfair_Display, Cormorant, Great_Vibes, Dancing_Script, Cinzel, Alex_Brush } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -18,6 +18,22 @@ const greatVibes = Great_Vibes({
   variable: "--font-great-vibes",
 });
 
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--font-dancing-script",
+});
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+});
+
+const alexBrush = Alex_Brush({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-alex-brush",
+});
+
 export const metadata: Metadata = {
   title: "T & L - Wedding",
   description: "Wedding website for T & L",
@@ -29,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${cormorant.variable} ${greatVibes.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${cormorant.variable} ${greatVibes.variable} ${dancingScript.variable} ${cinzel.variable} ${alexBrush.variable}`}>
       <body className="min-h-screen bg-white">
         {children}
       </body>

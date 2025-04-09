@@ -28,8 +28,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="space-y-8"
         >
-          <h2 className="text-lg sm:text-xl tracking-[0.2em] font-light">THE WEDDING OF</h2>
-          <h1 className="text-5xl sm:text-6xl md:text-7xl mb-10 border-y border-white/40 py-5 animate-[fadeIn_1.5s_ease-in]">Đình Tuấn & Thị Lý</h1>
+          <h2 className="text-lg sm:text-xl tracking-[0.2em] font-cinzel">THE WEDDING OF</h2>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl mb-10 border-y border-white/40 py-5 font-alex-brush animate-[fadeIn_1.5s_ease-in] font-greatVibes">Đình Tuấn & Thị Lý</h1>
         </motion.div>
         <Countdown />
       </div>

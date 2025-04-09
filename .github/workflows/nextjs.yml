@@ -76,6 +76,8 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.run-command }} build
         working-directory: ${{ env.PROJECT_DIR }}
+        env:
+          NODE_ENV: production
 
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3

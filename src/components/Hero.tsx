@@ -17,7 +17,7 @@ export default function Hero() {
           transition={{ duration: 1.5 }}
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url(/wedding-website/images/hero-bg.jpg)",
+            backgroundImage: "url(/images/hero-bg.jpg)",
           }}
         />
         <div className="absolute inset-0 bg-black/50" />

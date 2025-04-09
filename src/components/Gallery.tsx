@@ -8,37 +8,37 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const images = [
   {
-    src: '/wedding-website/images/gallery/1.jpg',
+    src: '/images/gallery/1.jpg',
     alt: 'Our first date',
     width: 800,
     height: 600,
   },
   {
-    src: '/wedding-website/images/gallery/2.jpg',
+    src: '/images/gallery/2.jpg',
     alt: 'Our first trip together',
     width: 600,
     height: 800,
   },
   {
-    src: '/wedding-website/images/gallery/3.jpg',
+    src: '/images/gallery/3.jpg',
     alt: 'Our engagement',
     width: 800,
     height: 600,
   },
   {
-    src: '/wedding-website/images/gallery/4.jpg',
+    src: '/images/gallery/4.jpg',
     alt: 'Our favorite place',
     width: 600,
     height: 800,
   },
   {
-    src: '/wedding-website/images/gallery/5.jpg',
+    src: '/images/gallery/5.jpg',
     alt: 'Our first home',
     width: 800,
     height: 600,
   },
   {
-    src: '/wedding-website/images/gallery/6.jpg',
+    src: '/images/gallery/6.jpg',
     alt: 'Our proposal',
     width: 600,
     height: 800,

@@ -10,25 +10,25 @@ const timeline = [
     date: '01/01/2020',
     title: 'Gặp Gỡ',
     description: 'Chúng tôi gặp nhau lần đầu tiên tại một buổi họp mặt bạn bè.',
-    image: '/wedding-website/images/timeline/meet.jpg',
+    image: '/images/timeline/meet.jpg',
   },
   {
     date: '15/06/2020',
     title: 'Hẹn Hò',
     description: 'Chúng tôi bắt đầu hẹn hò và khám phá những điểm chung.',
-    image: '/wedding-website/images/timeline/date.jpg',
+    image: '/images/timeline/date.jpg',
   },
   {
     date: '20/12/2021',
     title: 'Cầu Hôn',
     description: 'Anh ấy đã cầu hôn tôi tại bãi biển vào một buổi tối đẹp trời.',
-    image: '/wedding-website/images/timeline/propose.jpg',
+    image: '/images/timeline/propose.jpg',
   },
   {
     date: '15/12/2024',
     title: 'Đám Cưới',
     description: 'Ngày trọng đại của chúng tôi sẽ diễn ra vào tháng 12 năm 2024.',
-    image: '/wedding-website/images/timeline/wedding.jpg',
+    image: '/images/timeline/wedding.jpg',
   },
 ];
 

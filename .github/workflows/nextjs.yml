@@ -35,7 +35,7 @@ jobs:
           elif [ -f "package-lock.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "install-command=install --force --legacy-peer-deps" >> $GITHUB_OUTPUT
-            echo "run-command=npm run" >> $GITHUB_OUTPUT
+            echo "run-command=npm" >> $GITHUB_OUTPUT
           elif [ -f "bun.lockb" ]; then
             echo "manager=bun" >> $GITHUB_OUTPUT
             echo "install-command=install" >> $GITHUB_OUTPUT

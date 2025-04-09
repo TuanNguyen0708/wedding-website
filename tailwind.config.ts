@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         playfair: ['var(--font-playfair)'],
         cormorant: ['var(--font-cormorant)'],
+        "great-vibes": ["var(--font-great-vibes)"],
       },
       colors: {
         primary: {

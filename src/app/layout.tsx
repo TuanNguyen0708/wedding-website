@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Cormorant } from "next/font/google";
+import { Playfair_Display, Cormorant, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -10,6 +10,12 @@ const playfair = Playfair_Display({
 const cormorant = Cormorant({
   subsets: ["latin"],
   variable: "--font-cormorant",
+});
+
+const greatVibes = Great_Vibes({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-great-vibes",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${cormorant.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${cormorant.variable} ${greatVibes.variable}`}>
       <body className="min-h-screen bg-white">
         {children}
       </body>

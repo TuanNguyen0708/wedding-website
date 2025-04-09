@@ -62,7 +62,7 @@ export default function WeddingGift() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {qrCodes.map((item, index) => (
             <motion.div
               key={item.name}
@@ -70,15 +70,15 @@ export default function WeddingGift() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+              className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 max-w-sm mx-auto w-full"
             >
-              <div className="p-6">
+              <div className="p-4">
                 <div className="flex flex-col items-center">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setSelectedQR(item)}
-                    className="relative w-64 h-64 rounded-lg overflow-hidden shadow-md mb-6"
+                    className="relative w-48 h-48 rounded-lg overflow-hidden shadow-md mb-4"
                   >
                     <Image
                       src={item.qrCode}

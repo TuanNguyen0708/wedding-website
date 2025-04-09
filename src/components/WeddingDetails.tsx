@@ -100,7 +100,6 @@ function EventCard({ event, index, scrollDirection }: {
             <FaMapMarkerAlt className="mr-3 text-primary-500" />
             <span>{event.location}</span>
           </div>
-          <p className="text-gray-600 mt-4">{event.description}</p>
         </div>
       </div>
       <div className="h-64">

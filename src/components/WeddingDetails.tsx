@@ -39,7 +39,7 @@ export default function WeddingDetails() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="font-great-vibes text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Thông Tin Lễ Cưới
           </h2>
           <p className="font-cormorant text-xl text-gray-600">
@@ -100,7 +100,6 @@ function EventCard({ event, index, scrollDirection }: {
             <FaMapMarkerAlt className="mr-3 text-primary-500" />
             <span>{event.location}</span>
           </div>
-          <p className="text-gray-600 mt-4">{event.description}</p>
         </div>
       </div>
       <div className="h-64">

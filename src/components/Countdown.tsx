@@ -16,7 +16,7 @@ export default function Countdown() {
     seconds: 0
   });
 
-  const [prevTime, setPrevTime] = useState({
+  const [_, setPrevTime] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
@@ -43,10 +43,10 @@ export default function Countdown() {
   }, [timeLeft]);
 
   const timeUnits: TimeUnit[] = [
-    { value: timeLeft.days, label: 'Ngày' },
-    { value: timeLeft.hours, label: 'Giờ' },
-    { value: timeLeft.minutes, label: 'Phút' },
-    { value: timeLeft.seconds, label: 'Giây' }
+    { value: timeLeft.days, label: 'NGÀY' },
+    { value: timeLeft.hours, label: 'GIỜ' },
+    { value: timeLeft.minutes, label: 'PHÚT' },
+    { value: timeLeft.seconds, label: 'GIÂY' }
   ];
 
   return (
@@ -56,11 +56,10 @@ export default function Countdown() {
       transition={{ duration: 0.8, delay: 0.4 }}
       className="w-full max-w-2xl mx-auto px-4"
     >
-      <div className="grid grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-        {timeUnits.map((unit, index) => (
+      <div className="grid grid-cols-4 gap-4 sm:gap-6">
+        {timeUnits.map((unit) => (
           <div key={unit.label} className="text-center">
-            <div className="relative aspect-square w-full max-w-[100px] sm:max-w-[150px] lg:max-w-[180px] mx-auto mb-2 p-4 sm:p-6">
-              <div className="absolute inset-0" />
+            <div className="relative bg-black/40  rounded-sm aspect-square w-full max-w-[100px] sm:max-w-[120px] mx-auto mb-2">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={unit.value}
@@ -70,13 +69,13 @@ export default function Countdown() {
                   transition={{ duration: 0.3 }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
-                  <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+                  <span className="text-3xl sm:text-4xl font-bold text-white">
                     {unit.value.toString().padStart(2, '0')}
                   </span>
                 </motion.div>
               </AnimatePresence>
             </div>
-            <div className="text-xs sm:text-sm text-white/80">{unit.label}</div>
+            <div className="text-sm sm:text-base tracking-wider text-white font-light">{unit.label}</div>
           </div>
         ))}
       </div>

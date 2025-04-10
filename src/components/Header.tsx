@@ -1,22 +1,29 @@
 "use client";
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollY } = useScrollAnimation();
+  const { scrollToSection } = useSmoothScroll();
 
   const navItems = [
-    { href: "#hero", label: "Trang Chủ" },
+    { href: "#dashboard", label: "Trang Chủ" },
     { href: "#story", label: "Câu Chuyện" },
     { href: "#details", label: "Thông Tin" },
     { href: "#gallery", label: "Ảnh Cưới" },
     { href: "#attendance", label: "Xác Nhận" },
     { href: "#guestbook", label: "Lời chúc" },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    scrollToSection(href);
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -30,29 +37,31 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <Link
-              href="/"
-              className={`text-2xl font-playfair font-bold ${
+            <a
+              href="#"
+              onClick={(e) => handleNavClick(e, "#dashboard")}
+              className={`text-2xl font-great-vibes font-bold ${
                 scrollY > 50 ? "text-pink-500" : "text-white"
               }`}
             >
               T & L
-            </Link>
+            </a>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.href}
                   href={item.href}
-                  className={`text-sm font-medium transition-colors ${
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className={`text-lg font-medium transition-colors font-great-vibes ${
                     scrollY > 50
                       ? "text-gray-900 hover:text-pink-500"
                       : "text-white hover:text-primary-200"
                   }`}
                 >
                   {item.label}
-                </Link>
+                </a>
               ))}
             </nav>
 
@@ -100,23 +109,21 @@ export default function Header() {
             className={`md:hidden ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
           >
             <div className={`px-2 pt-2 pb-3 space-y-1 ${
-              scrollY > 50 ? 'bg-white' : 'bg-transparent'
+              scrollY > 50 ? 'bg-white' : 'bg-black/40 backdrop-blur-sm'
             }`}>
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.href}
                   href={item.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className={`block px-3 py-2 rounded-md text-base font-great-vibes ${
                     scrollY > 50 
                       ? 'text-gray-900 hover:text-pink-500' 
                       : 'text-white hover:text-primary-200'
-                  } ${
-                    isOpen ? 'pointer-events-auto' : 'pointer-events-none'
                   }`}
-                  onClick={() => setIsOpen(false)}
                 >
                   {item.label}
-                </Link>
+                </a>
               ))}
             </div>
           </motion.div>

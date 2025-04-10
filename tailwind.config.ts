@@ -7,10 +7,17 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      sans: ['"PT Sans"', 'sans-serif']
+    },
     extend: {
       fontFamily: {
         playfair: ['var(--font-playfair)'],
         cormorant: ['var(--font-cormorant)'],
+        "great-vibes": ["var(--font-great-vibes)"],
+        "dancing-script": ["var(--font-dancing-script)"],
+        cinzel: ["var(--font-cinzel)"],
+        "alex-brush": ["var(--font-alex-brush)"],
       },
       colors: {
         primary: {

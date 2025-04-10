@@ -5,29 +5,31 @@ import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
-const timeline = [
+interface TimelineItem {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const timeline: TimelineItem[] = [
   {
-    date: '01/01/2020',
-    title: 'Gặp Gỡ',
-    description: 'Chúng tôi gặp nhau lần đầu tiên tại một buổi họp mặt bạn bè.',
+    title: 'Tình Yêu Đầu Tiên',
+    description: 'Từ cái nhìn đầu tiên, chúng tôi đã biết rằng đây là mối tình đặc biệt. Những khoảnh khắc đầu tiên bên nhau luôn là những kỷ niệm đẹp nhất.',
     image: '/images/timeline/meet.jpg',
   },
   {
-    date: '15/06/2020',
-    title: 'Hẹn Hò',
-    description: 'Chúng tôi bắt đầu hẹn hò và khám phá những điểm chung.',
+    title: 'Hạnh Phúc Bên Nhau',
+    description: 'Mỗi ngày bên nhau là một ngày hạnh phúc. Chúng tôi học cách thấu hiểu, chia sẻ và yêu thương nhau nhiều hơn.',
     image: '/images/timeline/date.jpg',
   },
   {
-    date: '20/12/2021',
-    title: 'Cầu Hôn',
-    description: 'Anh ấy đã cầu hôn tôi tại bãi biển vào một buổi tối đẹp trời.',
+    title: 'Lời Hứa Trọn Đời',
+    description: 'Chúng tôi hứa sẽ luôn bên nhau, cùng nhau vượt qua mọi khó khăn, cùng nhau xây dựng tổ ấm hạnh phúc.',
     image: '/images/timeline/propose.jpg',
   },
   {
-    date: '15/12/2024',
-    title: 'Đám Cưới',
-    description: 'Ngày trọng đại của chúng tôi sẽ diễn ra vào tháng 12 năm 2024.',
+    title: 'Tương Lai Tươi Sáng',
+    description: 'Chúng tôi tin rằng tình yêu của mình sẽ mãi bền vững, cùng nhau viết tiếp những trang mới của cuộc đời.',
     image: '/images/timeline/wedding.jpg',
   },
 ];
@@ -60,11 +62,10 @@ export default function OurStory() {
           {/* Timeline items */}
           <div className="space-y-8 md:space-y-16">
             {timeline.map((item, index) => (
-              <TimelineItem
+              <TimelineItemComponent
                 key={index}
                 item={item}
                 index={index}
-                scrollDirection={scrollDirection}
               />
             ))}
           </div>
@@ -74,11 +75,12 @@ export default function OurStory() {
   );
 }
 
-function TimelineItem({ item, index, scrollDirection }: { 
-  item: any; 
+interface TimelineItemProps {
+  item: TimelineItem;
   index: number;
-  scrollDirection: 'up' | 'down';
-}) {
+}
+
+function TimelineItemComponent({ item, index }: TimelineItemProps): JSX.Element {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -86,7 +88,6 @@ function TimelineItem({ item, index, scrollDirection }: {
 
   const isEven = index % 2 === 0;
   const initialX = isEven ? 100 : -100;
-  const animateX = scrollDirection === 'down' ? 0 : initialX;
 
   return (
     <motion.div
@@ -111,7 +112,6 @@ function TimelineItem({ item, index, scrollDirection }: {
             />
           </div>
           <div className="p-4 md:p-6">
-            <p className="text-sm text-gray-500 mb-2">{item.date}</p>
             <h3 className="font-playfair text-lg md:text-2xl font-bold text-gray-900 mb-2">
               {item.title}
             </h3>

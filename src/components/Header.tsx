@@ -71,6 +71,7 @@ export default function Header() {
                 scrollY > 50 ? "text-gray-900" : "text-white"
               }`}
               onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
             >
               <svg
                 className="w-6 h-6"
@@ -98,35 +99,28 @@ export default function Header() {
           </div>
 
           {/* Mobile Navigation Menu */}
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={
-              isOpen
-                ? { opacity: 1, height: "auto" }
-                : { opacity: 0, height: 0 }
-            }
-            transition={{ duration: 0.3 }}
-            className={`md:hidden ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
-          >
-            <div className={`px-2 pt-2 pb-3 space-y-1 ${
+          {isOpen && (
+            <div className={`md:hidden absolute left-0 right-0 ${
               scrollY > 50 ? 'bg-white' : 'bg-black/40 backdrop-blur-sm'
             }`}>
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
-                  className={`block px-3 py-2 rounded-md text-base font-great-vibes ${
-                    scrollY > 50 
-                      ? 'text-gray-900 hover:text-pink-500' 
-                      : 'text-white hover:text-primary-200'
-                  }`}
-                >
-                  {item.label}
-                </a>
-              ))}
+              <div className="px-2 pt-2 pb-3 space-y-1">
+                {navItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className={`block px-3 py-2 rounded-md text-base font-great-vibes ${
+                      scrollY > 50 
+                        ? 'text-gray-900 hover:text-pink-500' 
+                        : 'text-white hover:text-primary-200'
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
             </div>
-          </motion.div>
+          )}
         </div>
       </motion.header>
     </>

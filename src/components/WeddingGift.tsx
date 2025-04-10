@@ -28,8 +28,8 @@ export default function WeddingGift() {
       bankInfo: {
         accountName: "NGUYEN THI LY",
         accountNumber: "1234567890",
-        bankName: "Vietcombank",
-        branch: "Chi nhánh Hoi An",
+        bankName: "TPBank",
+        branch: "Hội An",
       },
     },
     {
@@ -37,9 +37,9 @@ export default function WeddingGift() {
       qrCode: "/images/qr-code/qr-groom.jpg",
       bankInfo: {
         accountName: "NGUYEN DINH TUAN",
-        accountNumber: "0987654321",
-        bankName: "Vietcombank",
-        branch: "Chi nhánh Da Nang",
+        accountNumber: "1234567890",
+        bankName: "TPBank",
+        branch: "Đà Nẵng",
       },
     },
   ];

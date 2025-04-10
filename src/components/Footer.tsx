@@ -30,7 +30,7 @@ export default function Footer() {
           className="text-center"
         >
           <p className="text-white/80">
-            &copy; 2024 Đình Tuấn & Thị Lý. All rights reserved.
+            &copy; 2025 T ❤ L. Thank you for being my soulmate.
           </p>
         </motion.div>
       </div>

@@ -80,7 +80,7 @@ interface TimelineItemProps {
   index: number;
 }
 
-function TimelineItemComponent({ item, index }: TimelineItemProps): JSX.Element {
+function TimelineItemComponent({ item, index }: TimelineItemProps) {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import Image from 'next/image';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 interface TimelineItem {
   title: string;
@@ -13,24 +13,28 @@ interface TimelineItem {
 
 const timeline: TimelineItem[] = [
   {
-    title: 'Tình Yêu Đầu Tiên',
-    description: 'Từ cái nhìn đầu tiên, chúng tôi đã biết rằng đây là mối tình đặc biệt. Những khoảnh khắc đầu tiên bên nhau luôn là những kỷ niệm đẹp nhất.',
-    image: '/images/timeline/meet.jpg',
+    title: "Tình Yêu Đầu Tiên",
+    description:
+      "Từ cái nhìn đầu tiên, chúng tôi đã biết rằng đây là mối tình đặc biệt. Những khoảnh khắc đầu tiên bên nhau luôn là những kỷ niệm đẹp nhất.",
+    image: "/images/timeline/meet.jpg",
   },
   {
-    title: 'Hạnh Phúc Bên Nhau',
-    description: 'Mỗi ngày bên nhau là một ngày hạnh phúc. Chúng tôi học cách thấu hiểu, chia sẻ và yêu thương nhau nhiều hơn.',
-    image: '/images/timeline/date.jpg',
+    title: "Hạnh Phúc Bên Nhau",
+    description:
+      "Mỗi ngày bên nhau là một ngày hạnh phúc. Chúng tôi học cách thấu hiểu, chia sẻ và yêu thương nhau nhiều hơn.",
+    image: "/images/timeline/date.jpg",
   },
   {
-    title: 'Lời Hứa Trọn Đời',
-    description: 'Chúng tôi hứa sẽ luôn bên nhau, cùng nhau vượt qua mọi khó khăn, cùng nhau xây dựng tổ ấm hạnh phúc.',
-    image: '/images/timeline/propose.jpg',
+    title: "Lời Hứa Trọn Đời",
+    description:
+      "Chúng tôi hứa sẽ luôn bên nhau, cùng nhau vượt qua mọi khó khăn, cùng nhau xây dựng tổ ấm hạnh phúc.",
+    image: "/images/timeline/propose.jpg",
   },
   {
-    title: 'Tương Lai Tươi Sáng',
-    description: 'Chúng tôi tin rằng tình yêu của mình sẽ mãi bền vững, cùng nhau viết tiếp những trang mới của cuộc đời.',
-    image: '/images/timeline/wedding.jpg',
+    title: "Tương Lai Tươi Sáng",
+    description:
+      "Chúng tôi tin rằng tình yêu của mình sẽ mãi bền vững, cùng nhau viết tiếp những trang mới của cuộc đời.",
+    image: "/images/timeline/wedding.jpg",
   },
 ];
 
@@ -62,11 +66,7 @@ export default function OurStory() {
           {/* Timeline items */}
           <div className="space-y-8 md:space-y-16">
             {timeline.map((item, index) => (
-              <TimelineItemComponent
-                key={index}
-                item={item}
-                index={index}
-              />
+              <TimelineItemComponent key={index} item={item} index={index} />
             ))}
           </div>
         </div>
@@ -95,14 +95,19 @@ function TimelineItemComponent({ item, index }: TimelineItemProps) {
       initial={{ opacity: 0, x: initialX }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.8, delay: index * 0.2 }}
-      className="relative w-full"
+      className="relative w-full flex flex-col md:flex-row items-center px-4 md:px-0"
     >
-      <div className={`w-full md:w-5/12 ${isEven ? 'md:ml-auto md:mr-8' : 'md:mr-auto md:ml-8'}`}>
-        <motion.div 
+      {/* Image container */}
+      <div
+        className={`w-full max-w-md mx-auto md:w-1/2 ${
+          isEven ? "md:order-1 md:pr-8" : "md:order-2 md:pl-8"
+        }`}
+      >
+        <motion.div
           className="bg-white rounded-lg shadow-lg overflow-hidden transform-gpu hover:shadow-xl transition-shadow duration-300"
           whileHover={{ scale: 1.02 }}
         >
-          <div className="relative h-48 md:h-64">
+          <div className="relative h-56 md:h-64">
             <Image
               src={item.image}
               alt={item.title}
@@ -111,14 +116,24 @@ function TimelineItemComponent({ item, index }: TimelineItemProps) {
               sizes="(max-width: 768px) 100vw, 45vw"
             />
           </div>
-          <div className="p-4 md:p-6">
-            <h3 className="font-playfair text-lg md:text-2xl font-bold text-gray-900 mb-2">
-              {item.title}
-            </h3>
-            <p className="text-gray-600 text-sm md:text-base">{item.description}</p>
-          </div>
         </motion.div>
+      </div>
+
+      {/* Text container */}
+      <div
+        className={`w-full max-w-md mx-auto md:w-1/2 ${
+          isEven ? "md:order-2 md:pl-8" : "md:order-1 md:pr-8"
+        }`}
+      >
+        <div className="bg-white rounded-lg p-6">
+          <h3 className="font-playfair text-xl md:text-2xl font-bold text-gray-900 mb-4">
+            {item.title}
+          </h3>
+          <p className="text-gray-600 text-sm md:text-base">
+            {item.description}
+          </p>
+        </div>
       </div>
     </motion.div>
   );
-} 
+}

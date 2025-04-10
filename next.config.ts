@@ -1,9 +1,5 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV;
-
-console.log("isProd", process.env.NODE_ENV);
-
 const nextConfig: NextConfig = {
   output: "export",
   eslint: {
@@ -11,7 +7,6 @@ const nextConfig: NextConfig = {
   },
   images: {
     unoptimized: true,
-    path: isProd === "production" ? "/wedding-website" : "",
   },
 };
 

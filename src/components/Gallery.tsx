@@ -1,49 +1,56 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import Image from 'next/image';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Image from "next/image";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const images = [
   {
-    src: '/images/gallery/1.jpg',
-    alt: 'Our first date',
+    src: "/images/gallery/1.jpg",
+    alt: "Our first date",
     width: 800,
     height: 600,
   },
   {
-    src: '/images/gallery/2.jpg',
-    alt: 'Our first trip together',
+    src: "/images/gallery/2.jpg",
+    alt: "Our first trip together",
     width: 600,
     height: 800,
   },
   {
-    src: '/images/gallery/3.jpg',
-    alt: 'Our engagement',
+    src: "/images/gallery/3.jpg",
+    alt: "Our engagement",
     width: 800,
     height: 600,
   },
   {
-    src: '/images/gallery/4.jpg',
-    alt: 'Our favorite place',
+    src: "/images/gallery/4.jpg",
+    alt: "Our favorite place",
     width: 600,
     height: 800,
   },
   {
-    src: '/images/gallery/5.jpg',
-    alt: 'Our first home',
+    src: "/images/gallery/5.jpg",
+    alt: "Our first home",
     width: 800,
     height: 600,
   },
   {
-    src: '/images/gallery/6.jpg',
-    alt: 'Our proposal',
+    src: "/images/gallery/6.jpg",
+    alt: "Our proposal",
     width: 600,
     height: 800,
   },
 ];
+
+interface GalleryImage {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -67,7 +74,7 @@ export default function Gallery() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="columns-2 md:columns-2 lg:columns-3 gap-2 md:gap-3 lg:gap-4">
           {images.map((image, index) => (
             <GalleryItem
               key={index}
@@ -105,10 +112,15 @@ export default function Gallery() {
   );
 }
 
-function GalleryItem({ image, index, scrollDirection, onClick }: { 
-  image: any; 
+function GalleryItem({
+  image,
+  index,
+  scrollDirection,
+  onClick,
+}: {
+  image: GalleryImage;
   index: number;
-  scrollDirection: 'up' | 'down';
+  scrollDirection: "up" | "down";
   onClick: () => void;
 }) {
   const [ref, inView] = useInView({
@@ -117,7 +129,11 @@ function GalleryItem({ image, index, scrollDirection, onClick }: {
   });
 
   const initialY = 50;
-  const animateY = scrollDirection === 'down' ? 0 : initialY;
+  const animateY = scrollDirection === "down" ? 0 : initialY;
+
+  // Calculate row span based on image aspect ratio
+  const isWide = image.width / image.height > 1.5; // 16:9 is wider than 4:3
+  const aspectRatio = isWide ? 'aspect-[16/9]' : 'aspect-[4/3]';
 
   return (
     <motion.div
@@ -125,7 +141,7 @@ function GalleryItem({ image, index, scrollDirection, onClick }: {
       initial={{ opacity: 0, y: initialY }}
       animate={inView ? { opacity: 1, y: animateY } : {}}
       transition={{ duration: 0.8, delay: index * 0.1 }}
-      className="relative aspect-square overflow-hidden rounded-lg cursor-pointer hover:opacity-90 transition-opacity"
+      className={`relative ${aspectRatio} mb-2 md:mb-3 lg:mb-4 overflow-hidden rounded-lg cursor-pointer hover:opacity-90 transition-opacity`}
       onClick={onClick}
     >
       <Image
@@ -136,4 +152,4 @@ function GalleryItem({ image, index, scrollDirection, onClick }: {
       />
     </motion.div>
   );
-} 
+}

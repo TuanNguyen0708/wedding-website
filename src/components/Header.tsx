@@ -42,7 +42,7 @@ export default function Header() {
               onClick={(e) => handleNavClick(e, "#dashboard")}
               className={`text-2xl font-great-vibes font-bold ${
                 scrollY > 50 ? "text-pink-500" : "text-white"
-              }`}
+              } hover:text-pink-500 transition-colors duration-300`}
             >
               T & L
             </a>
@@ -57,7 +57,7 @@ export default function Header() {
                   className={`text-lg font-medium transition-colors font-great-vibes ${
                     scrollY > 50
                       ? "text-gray-900 hover:text-pink-500"
-                      : "text-white hover:text-primary-200"
+                      : "text-white hover:text-pink-500"
                   }`}
                 >
                   {item.label}
@@ -69,7 +69,7 @@ export default function Header() {
             <button
               className={`md:hidden ${
                 scrollY > 50 ? "text-gray-900" : "text-white"
-              }`}
+              } hover:text-pink-500 transition-colors duration-300`}
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -112,8 +112,8 @@ export default function Header() {
                     className={`block px-3 py-2 rounded-md text-base font-great-vibes ${
                       scrollY > 50 
                         ? 'text-gray-900 hover:text-pink-500' 
-                        : 'text-white hover:text-primary-200'
-                    }`}
+                        : 'text-white hover:text-pink-500'
+                    } transition-colors duration-300`}
                   >
                     {item.label}
                   </a>

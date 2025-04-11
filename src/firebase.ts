@@ -2,13 +2,13 @@ import { initializeApp, getApps } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD5p3tILDfVLEXf9xrvN9UuNkoT1kKvQfE",
-  authDomain: "wedding-3f966.firebaseapp.com",
-  projectId: "wedding-3f966",
-  storageBucket: "wedding-3f966.firebasestorage.app",
-  messagingSenderId: "394178729092",
-  appId: "1:394178729092:web:6f50dec276c90b40cd9ed1",
-  measurementId: "G-4Q7BNENMNH"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase

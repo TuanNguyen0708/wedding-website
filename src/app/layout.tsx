@@ -36,8 +36,11 @@ const alexBrush = Alex_Brush({
 });
 
 export const metadata: Metadata = {
-  title: "T & L - Wedding",
+  title: "Tuấn & Lý",
   description: "Wedding website for T & L",
+  icons: {
+    icon: '/images/favicon.ico',
+  },
 };
 
 export default function RootLayout({

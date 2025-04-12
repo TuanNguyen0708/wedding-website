@@ -6,7 +6,17 @@ import { FaMapMarkerAlt, FaClock, FaCalendarAlt } from 'react-icons/fa';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import SectionTitle from './SectionTitle';
 
-const events = [
+interface Event {
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  address: string;
+  description: string;
+  mapUrl: string;
+}
+
+const events: Event[] = [
   {
     title: 'Lễ Thành Hôn',
     date: '06/07/2025',
@@ -54,7 +64,7 @@ export default function WeddingDetails() {
 }
 
 function EventCard({ event, index, scrollDirection }: { 
-  event: any; 
+  event: Event; 
   index: number;
   scrollDirection: 'up' | 'down';
 }) {
@@ -75,25 +85,25 @@ function EventCard({ event, index, scrollDirection }: {
       className="bg-white rounded-lg shadow-lg overflow-hidden"
     >
       <div className="p-6">
-        <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-4">
+        <h3 className="font-playfair text-2xl font-bold text-pink-600 mb-4">
           {event.title}
         </h3>
         <div className="space-y-4">
           <div className="flex items-center text-gray-600">
-            <FaCalendarAlt className="mr-3 text-primary-500" />
+            <FaCalendarAlt className="mr-3 text-pink-500" />
             <span>{event.date}</span>
           </div>
           <div className="flex items-center text-gray-600">
-            <FaClock className="mr-3 text-primary-500" />
+            <FaClock className="mr-3 text-pink-500" />
             <span>{event.time}</span>
           </div>
           <div className="flex items-center text-gray-600">
-            <FaMapMarkerAlt className="mr-3 text-primary-500" />
+            <FaMapMarkerAlt className="mr-3 text-pink-500" />
             <span>{event.location}</span>
           </div>
         </div>
       </div>
-      <div className="h-64">
+      <div className="h-96">
         <iframe
           src={event.mapUrl}
           width="100%"

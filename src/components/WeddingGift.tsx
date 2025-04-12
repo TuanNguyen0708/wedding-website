@@ -66,6 +66,9 @@ export default function WeddingGift() {
             >
               <div className="p-6">
                 <div className="flex flex-col items-center">
+                  <h3 className="font-playfair text-3xl font-bold text-pink-600 mb-6">
+                    {item.name}
+                  </h3>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -80,39 +83,33 @@ export default function WeddingGift() {
                     />
                   </motion.button>
 
-                  <div className="text-center space-y-6">
-                    <h3 className="font-playfair text-3xl font-bold text-pink-600">
-                      {item.name}
-                    </h3>
-                    
-                    <div className="space-y-1 text-gray-700 text-left">
-                      <div className="flex items-center space-x-3">
-                        <FaUser className="text-pink-500 text-xl flex-shrink-0" />
-                        <div>
-                          <span className="font-medium block text-sm text-gray-500">Tên tài khoản</span>
-                          <span className="font-semibold">{item.bankInfo.accountName}</span>
-                        </div>
+                  <div className="space-y-1 text-gray-700 text-left">
+                    <div className="flex items-center space-x-3">
+                      <FaUser className="text-pink-500 text-xl flex-shrink-0" />
+                      <div>
+                        <span className="font-medium block text-sm text-gray-500">Tên tài khoản</span>
+                        <span className="font-semibold">{item.bankInfo.accountName}</span>
                       </div>
-                      <div className="flex items-center space-x-3">
-                        <FaCreditCard className="text-pink-500 text-xl flex-shrink-0" />
-                        <div>
-                          <span className="font-medium block text-sm text-gray-500">Số tài khoản</span>
-                          <span className="font-mono font-semibold">{item.bankInfo.accountNumber}</span>
-                        </div>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <FaCreditCard className="text-pink-500 text-xl flex-shrink-0" />
+                      <div>
+                        <span className="font-medium block text-sm text-gray-500">Số tài khoản</span>
+                        <span className="font-mono font-semibold">{item.bankInfo.accountNumber}</span>
                       </div>
-                      <div className="flex items-center space-x-3">
-                        <FaBuilding className="text-pink-500 text-xl flex-shrink-0" />
-                        <div>
-                          <span className="font-medium block text-sm text-gray-500">Ngân hàng</span>
-                          <span className="font-semibold">{item.bankInfo.bankName}</span>
-                        </div>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <FaBuilding className="text-pink-500 text-xl flex-shrink-0" />
+                      <div>
+                        <span className="font-medium block text-sm text-gray-500">Ngân hàng</span>
+                        <span className="font-semibold">{item.bankInfo.bankName}</span>
                       </div>
-                      <div className="flex items-center space-x-3">
-                        <FaMapMarkerAlt className="text-pink-500 text-xl flex-shrink-0" />
-                        <div>
-                          <span className="font-medium block text-sm text-gray-500">Chi nhánh</span>
-                          <span className="font-semibold">{item.bankInfo.branch}</span>
-                        </div>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <FaMapMarkerAlt className="text-pink-500 text-xl flex-shrink-0" />
+                      <div>
+                        <span className="font-medium block text-sm text-gray-500">Chi nhánh</span>
+                        <span className="font-semibold">{item.bankInfo.branch}</span>
                       </div>
                     </div>
                   </div>

@@ -30,7 +30,6 @@ export default function AttendanceForm() {
 
   const onSubmit = async (data: any) => {
     setIsSubmitting(true);
-    setSubmitStatus(null);
 
     try {
       const success = await submitAttendance({
@@ -46,6 +45,7 @@ export default function AttendanceForm() {
         setSubmitStatus('error');
       }
     } catch (error) {
+      console.error('Error submitting attendance:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

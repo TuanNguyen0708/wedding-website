@@ -62,10 +62,10 @@ export default function GuestbookForm() {
           className="text-center mb-16"
         >
           <h2 className="font-great-vibes text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Lời Chúc
+            Sổ lưu bút
           </h2>
           <p className="font-cormorant text-xl text-gray-600">
-            Gửi lời chúc đến cặp đôi
+          Cảm ơn bạn rất nhiều vì đã gửi những lời chúc mừng tốt đẹp nhất đến đám cưới của chúng tôi!
           </p>
         </motion.div>
 

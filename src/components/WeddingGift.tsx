@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useState } from "react";
 import Image from "next/image";
 import QRDialog from "./QRDialog";
+import SectionTitle from './SectionTitle';
 
 interface BankInfo {
   accountName: string;
@@ -47,20 +48,10 @@ export default function WeddingGift() {
   return (
     <section id="gift" className="py-20 bg-gradient-to-b from-white to-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="font-great-vibes text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Mừng Cưới
-          </h2>
-          <p className="font-cormorant text-xl text-gray-600">
-            Gửi mừng cưới đến cô dâu, chú rể
-          </p>
-        </motion.div>
+        <SectionTitle 
+          title="Mừng Cưới"
+          subtitle="Gửi mừng cưới đến cô dâu, chú rể"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {qrCodes.map((item, index) => (

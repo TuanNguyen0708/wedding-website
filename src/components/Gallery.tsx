@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import SectionTitle from "./SectionTitle";
 
 const images = [
   {
@@ -59,20 +60,10 @@ export default function Gallery() {
   return (
     <section id="gallery" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="font-great-vibes text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Khoảnh Khắc Của Chúng Tôi
-          </h2>
-          <p className="font-cormorant text-xl text-gray-600">
-            Những khoảnh khắc đáng nhớ trong hành trình yêu thương
-          </p>
-        </motion.div>
+        <SectionTitle 
+          title="Khoảnh Khắc Của Chúng Tôi"
+          subtitle="Những khoảnh khắc đáng nhớ trong hành trình yêu thương"
+        />
 
         <div className="columns-2 md:columns-2 lg:columns-3 gap-2 md:gap-3 lg:gap-4">
           {images.map((image, index) => (

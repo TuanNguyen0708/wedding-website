@@ -4,6 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
+import SectionTitle from "./SectionTitle";
 
 interface TimelineItem {
   title: string;
@@ -44,20 +45,10 @@ export default function OurStory() {
   return (
     <section id="story" className="py-12 md:py-20 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12 md:mb-16"
-        >
-          <h2 className="font-great-vibes text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            Câu Chuyện Của Chúng Tôi
-          </h2>
-          <p className="font-cormorant text-lg md:text-xl text-gray-600">
-            Hành trình yêu thương của chúng tôi
-          </p>
-        </motion.div>
+        <SectionTitle 
+          title="Câu Chuyện Của Chúng Tôi"
+          subtitle="Hành trình yêu thương của chúng tôi"
+        />
 
         <div className="relative">
           {/* Timeline line */}

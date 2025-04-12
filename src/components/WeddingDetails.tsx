@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaMapMarkerAlt, FaClock, FaCalendarAlt } from 'react-icons/fa';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import SectionTitle from './SectionTitle';
 
 const events = [
   {
@@ -32,20 +33,10 @@ export default function WeddingDetails() {
   return (
     <section id="details" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="font-great-vibes text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Thông Tin Lễ Cưới
-          </h2>
-          <p className="font-cormorant text-xl text-gray-600">
-            Chúng tôi rất mong được gặp bạn trong ngày trọng đại
-          </p>
-        </motion.div>
+        <SectionTitle 
+          title="Thông Tin Lễ Cưới"
+          subtitle="Chúng tôi rất mong được gặp bạn trong ngày trọng đại"
+        />
 
         <div className="grid md:grid-cols-2 gap-8">
           {events.map((event, index) => (

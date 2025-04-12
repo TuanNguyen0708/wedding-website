@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useAttendance } from '../hooks/useFirebase';
+import SectionTitle from './SectionTitle';
 
 const schema = yup.object().shape({
   name: yup.string().required('Vui lòng nhập tên của bạn'),
@@ -15,7 +16,7 @@ const schema = yup.object().shape({
 
 export default function AttendanceForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const { submitAttendance, loading: attendanceLoading, error: attendanceError } = useAttendance();
 
   const {
@@ -54,20 +55,10 @@ export default function AttendanceForm() {
   return (
     <section id="attendance" className="py-20 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="font-great-vibes text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Xác Nhận Tham Dự
-          </h2>
-          <p className="font-cormorant text-xl text-gray-600">
-            Chúng tôi rất mong được gặp bạn trong ngày trọng đại
-          </p>
-        </motion.div>
+        <SectionTitle 
+          title="Xác Nhận Tham Dự"
+          subtitle="Chúng tôi rất mong được gặp bạn trong ngày trọng đại"
+        />
 
         {submitStatus === 'success' ? (
           <motion.div

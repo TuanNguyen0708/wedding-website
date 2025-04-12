@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useGuestbook } from '../hooks/useFirebase';
+import SectionTitle from './SectionTitle';
 
 const schema = yup.object().shape({
   name: yup.string().required('Vui lòng nhập tên của bạn'),
@@ -16,8 +17,6 @@ export default function GuestbookForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
   const { submitMessage, loading: guestbookLoading, error: guestbookError, messages } = useGuestbook();
-
-  console.log(messages);
 
   const {
     register,
@@ -54,20 +53,10 @@ export default function GuestbookForm() {
   return (
     <section id="guestbook" className="py-20 bg-gray-50 overflow-hidden transform-gpu">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="font-great-vibes text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Sổ lưu bút
-          </h2>
-          <p className="font-cormorant text-xl text-gray-600">
-          Cảm ơn bạn rất nhiều vì đã gửi những lời chúc mừng tốt đẹp nhất đến đám cưới của chúng tôi!
-          </p>
-        </motion.div>
+        <SectionTitle 
+          title="Sổ lưu bút"
+          subtitle="Cảm ơn bạn rất nhiều vì đã gửi những lời chúc mừng tốt đẹp nhất đến đám cưới của chúng tôi!"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Form Section */}
@@ -75,7 +64,6 @@ export default function GuestbookForm() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
           >
             {submitStatus === 'success' ? (
               <motion.div
@@ -157,7 +145,7 @@ export default function GuestbookForm() {
                   <div className="flex items-center justify-between mb-2">
                     <h4 className="font-medium text-gray-900">{message.name}</h4>
                     <span className="text-sm text-gray-500">
-                    {message.timestamp ? message.timestamp.toDate().toLocaleString() : ''}
+                      {message.timestamp ? message.timestamp.toDate().toLocaleString() : ''}
                     </span>
                   </div>
                   <p className="text-gray-600">{message.message}</p>

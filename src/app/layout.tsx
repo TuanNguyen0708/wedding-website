@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Cormorant, Great_Vibes, Dancing_Script, Cinzel, Alex_Brush } from "next/font/google";
 import "./globals.css";
+import ClientLayout from './ClientLayout';
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -47,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${cormorant.variable} ${greatVibes.variable} ${dancingScript.variable} ${cinzel.variable} ${alexBrush.variable}`}>
       <body className="min-h-screen bg-white">
-        {children}
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

@@ -5,6 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import QRDialog from "./QRDialog";
 import SectionTitle from './SectionTitle';
+import { FaUser, FaCreditCard, FaBuilding, FaMapMarkerAlt } from 'react-icons/fa';
 
 interface BankInfo {
   accountName: string;
@@ -61,15 +62,15 @@ export default function WeddingGift() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 max-w-sm mx-auto w-full"
+              className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 max-w-sm mx-auto w-full hover:shadow-xl"
             >
-              <div className="p-4">
+              <div className="p-6">
                 <div className="flex flex-col items-center">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setSelectedQR(item)}
-                    className="relative w-48 h-48 rounded-lg overflow-hidden shadow-md mb-4"
+                    className="relative w-48 h-48 rounded-lg overflow-hidden shadow-md mb-6 ring-2 ring-pink-200 hover:ring-pink-400 transition-all duration-300"
                   >
                     <Image
                       src={item.qrCode}
@@ -79,27 +80,39 @@ export default function WeddingGift() {
                     />
                   </motion.button>
 
-                  <div className="text-center space-y-4">
-                    <h3 className="font-playfair text-2xl font-bold text-pink-600">
+                  <div className="text-center space-y-6">
+                    <h3 className="font-playfair text-3xl font-bold text-pink-600">
                       {item.name}
                     </h3>
                     
-                    <div className="space-y-2 text-gray-700">
-                      <div className="flex items-center justify-center space-x-2">
-                        <span className="font-medium">Tên tài khoản:</span>
-                        <span>{item.bankInfo.accountName}</span>
+                    <div className="space-y-1 text-gray-700 text-left">
+                      <div className="flex items-center space-x-3">
+                        <FaUser className="text-pink-500 text-xl flex-shrink-0" />
+                        <div>
+                          <span className="font-medium block text-sm text-gray-500">Tên tài khoản</span>
+                          <span className="font-semibold">{item.bankInfo.accountName}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center justify-center space-x-2">
-                        <span className="font-medium">Số tài khoản:</span>
-                        <span className="font-mono">{item.bankInfo.accountNumber}</span>
+                      <div className="flex items-center space-x-3">
+                        <FaCreditCard className="text-pink-500 text-xl flex-shrink-0" />
+                        <div>
+                          <span className="font-medium block text-sm text-gray-500">Số tài khoản</span>
+                          <span className="font-mono font-semibold">{item.bankInfo.accountNumber}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center justify-center space-x-2">
-                        <span className="font-medium">Ngân hàng:</span>
-                        <span>{item.bankInfo.bankName}</span>
+                      <div className="flex items-center space-x-3">
+                        <FaBuilding className="text-pink-500 text-xl flex-shrink-0" />
+                        <div>
+                          <span className="font-medium block text-sm text-gray-500">Ngân hàng</span>
+                          <span className="font-semibold">{item.bankInfo.bankName}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center justify-center space-x-2">
-                        <span className="font-medium">Chi nhánh:</span>
-                        <span>{item.bankInfo.branch}</span>
+                      <div className="flex items-center space-x-3">
+                        <FaMapMarkerAlt className="text-pink-500 text-xl flex-shrink-0" />
+                        <div>
+                          <span className="font-medium block text-sm text-gray-500">Chi nhánh</span>
+                          <span className="font-semibold">{item.bankInfo.branch}</span>
+                        </div>
                       </div>
                     </div>
                   </div>

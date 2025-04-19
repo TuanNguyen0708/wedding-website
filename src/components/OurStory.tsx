@@ -117,10 +117,10 @@ function TimelineItemComponent({ item, index }: TimelineItemProps) {
         }`}
       >
         <div className="bg-white rounded-lg p-6">
-          <h3 className="font-playfair text-xl md:text-2xl font-bold text-gray-900 mb-4">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 font-dancing-script">
             {item.title}
           </h3>
-          <p className="text-gray-600 text-sm md:text-base">
+          <p className="text-gray-600 text-sm md:text-base font-dancing-script">
             {item.description}
           </p>
         </div>

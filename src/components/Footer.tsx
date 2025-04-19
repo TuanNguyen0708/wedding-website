@@ -29,9 +29,10 @@ export default function Footer() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <p className="text-white/80">
-            &copy; 2025 T ❤ L
+          <p className="text-white/80 font-cormorant">
+             From Tuấn & Lý With Love
           </p>
+          <p className="text-white/80 font-cormorant">&copy; 2025</p>
         </motion.div>
       </div>
 

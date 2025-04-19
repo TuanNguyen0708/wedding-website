@@ -69,9 +69,9 @@ export default function QRDialog({ isOpen, onClose, qrCode, name }: QRDialogProp
                 >
                   <Dialog.Title
                     as="h3"
-                    className="text-2xl font-playfair font-bold text-center text-gray-900 mb-6"
+                    className="text-2xl font-bold text-center text-gray-900 mb-6 font-dancing-script"
                   >
-                    Mừng cưới {name}
+                    Mừng Cưới {name}
                   </Dialog.Title>
 
                   <div className="relative w-full aspect-square bg-gray-50 rounded-xl overflow-hidden shadow-inner p-4">
@@ -85,12 +85,12 @@ export default function QRDialog({ isOpen, onClose, qrCode, name }: QRDialogProp
                   </div>
 
                   <div className="mt-6 text-center">
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 font-dancing-script">
                       Quét mã QR để chuyển khoản mừng cưới
                     </p>
                   </div>
 
-                  <div className="mt-8 flex justify-center">
+                  <div className="mt-8 flex justify-center font-dancing-script">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}

@@ -10,39 +10,117 @@ import SectionTitle from "./SectionTitle";
 const images = [
   {
     src: "/images/gallery/1.jpg",
-    alt: "Our first date",
+    alt: "gallery",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/images/gallery/3.jpg",
+    alt: "gallery",
     width: 800,
     height: 600,
   },
   {
     src: "/images/gallery/2.jpg",
-    alt: "Our first trip together",
+    alt: "gallery",
     width: 600,
     height: 800,
   },
   {
-    src: "/images/gallery/3.jpg",
-    alt: "Our engagement",
-    width: 800,
-    height: 600,
-  },
-  {
     src: "/images/gallery/4.jpg",
-    alt: "Our favorite place",
+    alt: "gallery",
     width: 600,
     height: 800,
   },
   {
     src: "/images/gallery/5.jpg",
-    alt: "Our first home",
+    alt: "gallery",
     width: 800,
     height: 600,
   },
   {
     src: "/images/gallery/6.jpg",
-    alt: "Our proposal",
+    alt: "gallery",
     width: 600,
     height: 800,
+  },
+  {
+    src: "/images/gallery/7.jpg",
+    alt: "gallery",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/images/gallery/8.jpg",
+    alt: "gallery",
+    width: 600,
+    height: 800,
+  },
+  {
+    src: "/images/gallery/9.jpg",
+    alt: "gallery",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/images/gallery/10.jpg",
+    alt: "gallery",
+    width: 600,
+    height: 800,
+  },
+  {
+    src: "/images/gallery/11.jpg",
+    alt: "gallery",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/images/gallery/12.jpg",
+    alt: "gallery",
+    width: 600,
+    height: 800,
+  },
+  {
+    src: "/images/gallery/13.jpg",
+    alt: "gallery",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/images/gallery/14.jpg",
+    alt: "gallery",
+    width: 600,
+    height: 800,
+  },
+  {
+    src: "/images/gallery/15.jpg",
+    alt: "gallery",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/images/gallery/16.jpg",
+    alt: "gallery",
+    width: 600,
+    height: 800,
+  },
+  {
+    src: "/images/gallery/17.jpg",
+    alt: "gallery",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/images/gallery/18.jpg",
+    alt: "gallery",
+    width: 600,
+    height: 800,
+  },
+  {
+    src: "/images/gallery/19.jpg",
+    alt: "gallery",
+    width: 800,
+    height: 600,
   },
 ];
 
@@ -122,24 +200,21 @@ function GalleryItem({
   const initialY = 50;
   const animateY = scrollDirection === "down" ? 0 : initialY;
 
-  // Calculate row span based on image aspect ratio
-  const isWide = image.width / image.height > 1.5; // 16:9 is wider than 4:3
-  const aspectRatio = isWide ? 'aspect-[16/9]' : 'aspect-[4/3]';
-
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: initialY }}
       animate={inView ? { opacity: 1, y: animateY } : {}}
       transition={{ duration: 0.8, delay: index * 0.1 }}
-      className={`relative ${aspectRatio} mb-2 md:mb-3 lg:mb-4 overflow-hidden rounded-lg cursor-pointer hover:opacity-90 transition-opacity`}
+      className="relative mb-2 md:mb-3 lg:mb-4 overflow-hidden rounded-lg cursor-pointer hover:opacity-90 transition-opacity break-inside-avoid"
       onClick={onClick}
     >
       <Image
         src={image.src}
         alt={image.alt}
-        fill
-        className="object-cover"
+        width={image.width}
+        height={image.height}
+        className="w-full h-auto object-cover"
       />
     </motion.div>
   );

@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Tuấn & Lý | Mời Bạn Đến Chia Vui',
     description: 'Mời bạn đến tham dự lễ cưới của chúng tôi. Hãy cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại này.',
-    images: ['/images/slider/1.jpg'],
+    images: ['https://tuan-ly.love/images/slider/1.jpg'],
     url: 'https://tuan-ly.love',
     type: 'website',
   },

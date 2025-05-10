@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import OurStory from "@/components/OurStory";
@@ -14,7 +13,7 @@ import ThankYouMessage from "@/components/ThankYouMessage";
 export default function Home() {
   return (
     <>
-      <Head>
+      <head>
         <title>Tuấn & Lý | Mời Bạn Đến Chia Vui</title>
         <meta
           name="description"
@@ -30,7 +29,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon.ico" />
-      </Head>
+      </head>
       <main className="relative">
         <HeartAnimation />
         <Header />

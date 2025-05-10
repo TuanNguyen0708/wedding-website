@@ -29,7 +29,7 @@ export default function WeddingGift() {
       qrCode: "/images/qr-code/qr-bride.jpg",
       bankInfo: {
         accountName: "NGUYEN THI LY",
-        accountNumber: "1234567890",
+        accountNumber: "44768626868",
         bankName: "TPBank",
         branch: "Hội An",
       },
@@ -39,7 +39,7 @@ export default function WeddingGift() {
       qrCode: "/images/qr-code/qr-groom.jpg",
       bankInfo: {
         accountName: "NGUYEN DINH TUAN",
-        accountNumber: "1234567890",
+        accountNumber: "99607081996",
         bankName: "TPBank",
         branch: "Đà Nẵng",
       },

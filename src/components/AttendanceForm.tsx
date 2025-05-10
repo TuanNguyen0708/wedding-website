@@ -100,7 +100,7 @@ export default function AttendanceForm() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-base font-medium text-gray-700 font-dancing-script"
+                className="block text-xl font-medium text-gray-700 font-dancing-script"
               >
                 Họ và tên
               </label>
@@ -119,7 +119,7 @@ export default function AttendanceForm() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-base font-medium text-gray-700 font-dancing-script"
+                className="block text-xl font-medium text-gray-700 font-dancing-script"
               >
                 Email
               </label>
@@ -138,7 +138,7 @@ export default function AttendanceForm() {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-base font-medium text-gray-700 font-dancing-script"
+                className="block text-xl font-medium text-gray-700 font-dancing-script"
               >
                 Số điện thoại
               </label>
@@ -157,7 +157,7 @@ export default function AttendanceForm() {
             <button
               type="submit"
               disabled={isSubmitting || attendanceLoading}
-              className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 disabled:opacity-50 font-dancing-script"
+              className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-xl font-medium text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 disabled:opacity-50 font-dancing-script"
             >
               {isSubmitting || attendanceLoading
                 ? "Đang gửi..."

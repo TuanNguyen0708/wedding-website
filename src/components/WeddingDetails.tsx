@@ -24,7 +24,7 @@ const events: Event[] = [
     location: 'Nhà Trai',
     address: 'Thôn Trung Phú 1, Phường Điện Minh, Thị Xã Điện Bàn, Tỉnh Quảng Nam',
     description: 'Chúng tôi sẽ tổ chức lễ thành hôn tại nhà trai',
-    mapUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d959.3592949726841!2d108.25823126962045!3d15.886151288932771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1svi!2s!4v1744119410725!5m2!1svi!2s',
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d959.3593092685003!2d108.25819626962044!3d15.886148288932773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTXCsDUzJzEwLjEiTiAxMDjCsDE1JzMxLjgiRQ!5e0!3m2!1svi!2s!4v1746887434442!5m2!1svi!2s',
   },
   {
     title: 'Tiệc Cưới',
@@ -99,7 +99,7 @@ function EventCard({ event, index, scrollDirection }: {
           </div>
           <div className="flex items-center text-gray-600">
             <FaMapMarkerAlt className="mr-3 text-pink-500" />
-            <span>{event.location}</span>
+            <span className='text-xl'>{event.location}</span>
           </div>
         </div>
       </div>

@@ -85,7 +85,7 @@ export default function QRDialog({ isOpen, onClose, qrCode, name }: QRDialogProp
                   </div>
 
                   <div className="mt-6 text-center">
-                    <p className="text-sm text-gray-500 font-dancing-script">
+                    <p className="text-base text-gray-500 font-dancing-script">
                       Quét mã QR để chuyển khoản mừng cưới
                     </p>
                   </div>

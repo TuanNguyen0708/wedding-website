@@ -81,10 +81,10 @@ export default function GuestbookForm() {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-center p-6 bg-green-50 rounded-lg"
               >
-                <h3 className="text-green-800 font-semibold text-xl mb-2 font-dancing-script">
+                <h3 className="text-green-800 font-semibold text-2xl mb-2 font-dancing-script">
                   Cảm ơn lời chúc của bạn!
                 </h3>
-                <p className="text-green-600 font-dancing-script">
+                <p className="text-green-600 text-xl font-dancing-script">
                   Lời chúc của bạn đã được gửi thành công.
                 </p>
               </motion.div>
@@ -102,7 +102,7 @@ export default function GuestbookForm() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-base font-medium text-gray-700 font-dancing-script"
+                    className="block text-xl font-medium text-gray-700 font-dancing-script"
                   >
                     Họ và tên
                   </label>
@@ -121,7 +121,7 @@ export default function GuestbookForm() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-base font-medium text-gray-700 font-dancing-script"
+                    className="block text-xl font-medium text-gray-700 font-dancing-script"
                   >
                     Lời chúc
                   </label>
@@ -140,7 +140,7 @@ export default function GuestbookForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting || guestbookLoading}
-                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 disabled:opacity-50 font-dancing-script"
+                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-xl font-medium text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 disabled:opacity-50 font-dancing-script"
                 >
                   {isSubmitting || guestbookLoading
                     ? "Đang gửi..."
@@ -158,7 +158,7 @@ export default function GuestbookForm() {
             transition={{ duration: 0.8 }}
             className="bg-white p-6 rounded-lg shadow-sm overflow-y-auto max-h-[600px] transform-gpu"
           >
-            <h3 className="text-xl font-semibold text-gray-900 mb-6 font-dancing-script">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6 font-dancing-script">
               Lời chúc mừng
             </h3>
             <div className="space-y-6 ">
@@ -168,7 +168,7 @@ export default function GuestbookForm() {
                   className="border-b border-gray-200 pb-4 font-dancing-script"
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <h4 className="font-medium text-gray-900 font-dancing-script">
+                    <h4 className="font-medium text-gray-900 text-xl font-dancing-script">
                       {message.name}
                     </h4>
                     <span className="text-sm text-gray-500 font-dancing-script">
@@ -177,13 +177,13 @@ export default function GuestbookForm() {
                         : ""}
                     </span>
                   </div>
-                  <p className="text-gray-600 font-dancing-script">
+                  <p className="text-gray-600 text-xl font-dancing-script">
                     {message.message}
                   </p>
                 </div>
               ))}
               {messages.length === 0 && (
-                <p className="text-gray-500 text-center font-dancing-script">
+                <p className="text-gray-500 text-center text-xl font-dancing-script">
                   Chưa có lời chúc nào
                 </p>
               )}

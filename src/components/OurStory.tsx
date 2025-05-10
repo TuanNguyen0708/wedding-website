@@ -14,33 +14,45 @@ interface TimelineItem {
 
 const timeline: TimelineItem[] = [
   {
-    title: "Tình Yêu Đầu Tiên",
+    title: "Lần Đầu Gặp Nhau",
     description:
-      "Từ cái nhìn đầu tiên, chúng tôi đã biết rằng đây là mối tình đặc biệt. Những khoảnh khắc đầu tiên bên nhau luôn là những kỷ niệm đẹp nhất.",
+      "Ngay từ lần đầu gặp, chúng tôi đã cảm thấy có điều gì đó rất đặc biệt. Những ngày đầu tiên luôn đầy bỡ ngỡ nhưng cũng rất đáng nhớ.",
     image: "/images/timeline/1.jpg",
   },
   {
-    title: "Hạnh Phúc Bên Nhau",
+    title: "Những Điều Nhỏ Bé",
     description:
-      "Mỗi ngày bên nhau là một ngày hạnh phúc. Chúng tôi học cách thấu hiểu, chia sẻ và yêu thương nhau nhiều hơn.",
+      "Từ ly cà phê buổi sáng, chiếc ô khi trời mưa, đến những cái ôm bất chợt – những điều nhỏ ấy tạo nên cả một hành trình đầy ý nghĩa.",
     image: "/images/timeline/2.jpg",
   },
   {
-    title: "Lời Hứa Trọn Đời",
+    title: "Những Ngày Bình Yên",
     description:
-      "Chúng tôi hứa sẽ luôn bên nhau, cùng nhau vượt qua mọi khó khăn, cùng nhau xây dựng tổ ấm hạnh phúc.",
+      "Cùng nhau trải qua từng ngày bình dị – những bữa ăn đơn giản, những buổi tối trò chuyện – chính là điều khiến chúng tôi thêm gắn bó.",
     image: "/images/timeline/3.jpg",
   },
   {
-    title: "Tương Lai Tươi Sáng",
+    title: "Cùng Nhau Trưởng Thành",
     description:
-      "Chúng tôi tin rằng tình yêu của mình sẽ mãi bền vững, cùng nhau viết tiếp những trang mới của cuộc đời.",
+      "Chúng tôi học cách lắng nghe, chia sẻ và đồng hành qua những thay đổi trong cuộc sống. Không phải lúc nào cũng dễ dàng, nhưng luôn có nhau.",
     image: "/images/timeline/4.jpg",
+  },
+  {
+    title: "Nhìn Về Phía Trước",
+    description:
+      "Chúng tôi tin rằng tương lai sẽ còn nhiều điều đẹp đẽ đang chờ, miễn là cùng nhau bước tiếp, dù chậm rãi hay nhanh chóng.",
+    image: "/images/timeline/5.jpg",
+  },
+  {
+    title: "Viết Tiếp Câu Chuyện",
+    description:
+      "Không cần gì lớn lao, chỉ cần mỗi ngày vẫn chọn ở lại bên nhau – đó là cách chúng tôi viết tiếp câu chuyện của mình.",
+    image: "/images/timeline/6.jpg",
   },
 ];
 
+
 export default function OurStory() {
-  const { scrollDirection } = useScrollAnimation();
 
   return (
     <section id="story" className="py-12 md:py-20 bg-gray-50 overflow-hidden">

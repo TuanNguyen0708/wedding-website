@@ -17,25 +17,25 @@ const timeline: TimelineItem[] = [
     title: "Tình Yêu Đầu Tiên",
     description:
       "Từ cái nhìn đầu tiên, chúng tôi đã biết rằng đây là mối tình đặc biệt. Những khoảnh khắc đầu tiên bên nhau luôn là những kỷ niệm đẹp nhất.",
-    image: "/images/timeline/meet.jpg",
+    image: "/images/timeline/1.jpg",
   },
   {
     title: "Hạnh Phúc Bên Nhau",
     description:
       "Mỗi ngày bên nhau là một ngày hạnh phúc. Chúng tôi học cách thấu hiểu, chia sẻ và yêu thương nhau nhiều hơn.",
-    image: "/images/timeline/date.jpg",
+    image: "/images/timeline/2.jpg",
   },
   {
     title: "Lời Hứa Trọn Đời",
     description:
       "Chúng tôi hứa sẽ luôn bên nhau, cùng nhau vượt qua mọi khó khăn, cùng nhau xây dựng tổ ấm hạnh phúc.",
-    image: "/images/timeline/propose.jpg",
+    image: "/images/timeline/3.jpg",
   },
   {
     title: "Tương Lai Tươi Sáng",
     description:
       "Chúng tôi tin rằng tình yêu của mình sẽ mãi bền vững, cùng nhau viết tiếp những trang mới của cuộc đời.",
-    image: "/images/timeline/wedding.jpg",
+    image: "/images/timeline/4.jpg",
   },
 ];
 
@@ -98,7 +98,7 @@ function TimelineItemComponent({ item, index }: TimelineItemProps) {
           className="bg-white rounded-lg shadow-lg overflow-hidden transform-gpu hover:shadow-xl transition-shadow duration-300"
           whileHover={{ scale: 1.02 }}
         >
-          <div className="relative h-56 md:h-64">
+          <div className="relative h-[500px] md:h-[600px]">
             <Image
               src={item.image}
               alt={item.title}

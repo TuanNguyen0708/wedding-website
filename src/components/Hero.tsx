@@ -10,15 +10,15 @@ import 'swiper/css/bundle';
 
 const slides = [
   {
-    image: "/images/slider/hero-bg.jpg",
+    image: "/images/slider/1.jpg",
     alt: "Wedding background 1"
   },
   {
-    image: "/images/slider/propose.jpg",
+    image: "/images/slider/2.jpg",
     alt: "Wedding background 2"
   },
   {
-    image: "/images/slider/wedding.jpg",
+    image: "/images/slider/3.jpg",
     alt: "Wedding background 3"
   }
 ];

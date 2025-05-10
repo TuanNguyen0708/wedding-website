@@ -18,6 +18,7 @@ export default function Header() {
     { href: "#attendance", label: "Xác Nhận" },
     { href: "#guestbook", label: "Sổ Lưu bút" },
     { href: "#gift", label: "Mừng cưới" },
+    { href: "#thanks", label: "Lời cảm ơn" },
   ];
 
   const handleNavClick = (

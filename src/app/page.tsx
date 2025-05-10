@@ -8,6 +8,7 @@ import HeartAnimation from "@/components/HeartAnimation";
 import AttendanceForm from "@/components/AttendanceForm";
 import GuestbookForm from "@/components/GuestbookForm";
 import WeddingGift from "@/components/WeddingGift";
+import ThankYouMessage from "@/components/ThankYouMessage";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <AttendanceForm />
       <GuestbookForm />
       <WeddingGift />
+      <ThankYouMessage />
       <Footer />
     </main>
   );

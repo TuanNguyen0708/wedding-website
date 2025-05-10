@@ -9,13 +9,13 @@ import SectionTitle from "./SectionTitle";
 
 const images = [
   {
-    src: "/images/gallery/1.jpg",
+    src: "/images/gallery/8.jpg",
     alt: "gallery",
-    width: 800,
-    height: 600,
+    width: 600,
+    height: 800,
   },
   {
-    src: "/images/gallery/3.jpg",
+    src: "/images/gallery/1.jpg",
     alt: "gallery",
     width: 800,
     height: 600,
@@ -44,17 +44,18 @@ const images = [
     width: 600,
     height: 800,
   },
+    
   {
-    src: "/images/gallery/7.jpg",
+    src: "/images/gallery/3.jpg",
     alt: "gallery",
     width: 800,
     height: 600,
   },
   {
-    src: "/images/gallery/8.jpg",
+    src: "/images/gallery/13.jpg",
     alt: "gallery",
-    width: 600,
-    height: 800,
+    width: 800,
+    height: 600,
   },
   {
     src: "/images/gallery/9.jpg",
@@ -80,17 +81,12 @@ const images = [
     width: 600,
     height: 800,
   },
+
   {
-    src: "/images/gallery/13.jpg",
+    src: "/images/gallery/7.jpg",
     alt: "gallery",
     width: 800,
     height: 600,
-  },
-  {
-    src: "/images/gallery/14.jpg",
-    alt: "gallery",
-    width: 600,
-    height: 800,
   },
   {
     src: "/images/gallery/15.jpg",
@@ -98,20 +94,29 @@ const images = [
     width: 800,
     height: 600,
   },
+  
   {
-    src: "/images/gallery/16.jpg",
+    src: "/images/gallery/14.jpg",
     alt: "gallery",
     width: 600,
     height: 800,
   },
+  
   {
     src: "/images/gallery/17.jpg",
     alt: "gallery",
     width: 800,
     height: 600,
   },
+
   {
     src: "/images/gallery/18.jpg",
+    alt: "gallery",
+    width: 600,
+    height: 800,
+  },
+  {
+    src: "/images/gallery/16.jpg",
     alt: "gallery",
     width: 600,
     height: 800,
@@ -122,6 +127,7 @@ const images = [
     width: 800,
     height: 600,
   },
+  
 ];
 
 interface GalleryImage {

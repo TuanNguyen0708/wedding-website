@@ -36,8 +36,16 @@ const alexBrush = Alex_Brush({
 });
 
 export const metadata: Metadata = {
-  title: "Tuấn & Lý",
-  description: "Wedding website for T & L",
+  title: 'Tuấn & Lý | Mời Bạn Đến Chia Vui',
+  description: 'Mời bạn đến tham dự lễ cưới của chúng tôi. Hãy cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại này.',
+  openGraph: {
+    title: 'Tuấn & Lý | Mời Bạn Đến Chia Vui',
+    description: 'Mời bạn đến tham dự lễ cưới của chúng tôi. Hãy cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại này.',
+    images: ['/images/slider/1.jpg'],
+    url: 'https://tuan-ly.love',
+    type: 'website',
+  },
+  viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/images/favicon.ico',
   },

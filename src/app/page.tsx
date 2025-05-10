@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Lễ Cưới | Mời Bạn Đến Chia Vui</title>
+        <title>Tuấn & Lý | Mời Bạn Đến Chia Vui</title>
         <meta
           name="description"
           content="Mời bạn đến tham dự lễ cưới của chúng tôi. Hãy cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại này."

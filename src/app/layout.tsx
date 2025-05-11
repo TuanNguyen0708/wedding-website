@@ -44,6 +44,11 @@ export const metadata: Metadata = {
     images: ['https://tuan-ly.love/images/slider/1.jpg'],
     url: 'https://tuan-ly.love',
     type: 'website',
+    siteName: 'Tuấn & Lý Wedding',
+  },
+  other: {
+    'fb:app_id': '29299685979675600',
+    'og:locale': 'vi_VN',
   },
   viewport: 'width=device-width, initial-scale=1',
   icons: {

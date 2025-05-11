@@ -60,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${cormorant.variable} ${greatVibes.variable} ${dancingScript.variable} ${cinzel.variable} ${alexBrush.variable}`}>
       <head>
-      <meta property="fb:app_id" content="2929968597967560" />
+      <meta property="fb:app_id" content="29299685979675600" />
       </head>
       <body className="min-h-screen bg-white">
         <ClientLayout>{children}</ClientLayout>

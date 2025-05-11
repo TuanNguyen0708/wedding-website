@@ -46,10 +46,6 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Tuấn & Lý Wedding',
   },
-  other: {
-    'fb:app_id': '29299685979675600',
-    'og:locale': 'vi_VN',
-  },
   viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/images/favicon.ico',
@@ -63,6 +59,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${playfair.variable} ${cormorant.variable} ${greatVibes.variable} ${dancingScript.variable} ${cinzel.variable} ${alexBrush.variable}`}>
+      <head>
+      <meta property="fb:app_id" content="2929968597967560" />
+      </head>
       <body className="min-h-screen bg-white">
         <ClientLayout>{children}</ClientLayout>
       </body>

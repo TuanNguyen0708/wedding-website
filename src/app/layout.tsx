@@ -45,11 +45,11 @@ const alexBrush = Alex_Brush({
 export const metadata: Metadata = {
   title: "Tuấn & Lý | Mời Bạn Đến Chia Vui",
   description:
-    "Mời bạn đến tham dự lễ cưới của chúng tôi. Hãy cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại này.",
+    "Mời bạn đến tham dự lễ cưới của chúng mình. Hãy cùng chúng mình chia sẻ niềm vui trong ngày trọng đại này.",
   openGraph: {
     title: "Tuấn & Lý | Mời Bạn Đến Chia Vui",
     description:
-      "Mời bạn đến tham dự lễ cưới của chúng tôi. Hãy cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại này.",
+      "Mời bạn đến tham dự lễ cưới của chúng mình. Hãy cùng chúng mình chia sẻ niềm vui trong ngày trọng đại này.",
     images: ["https://tuan-ly.love/images/slider/1.jpg"],
     url: "https://tuan-ly.love",
     type: "website",
@@ -73,18 +73,18 @@ export default function RootLayout({
     >
       <head>
         <meta property="fb:app_id" content="668117552682185" />
-        <title>Tuấn &amp; Lý | Mời Bạn Đến Chia Vui</title>
+        <title>Tuấn &amp; Lý | Mời Bạn Đến Chung Vui</title>
         <meta
           name="description"
-          content="Mời bạn đến tham dự lễ cưới của chúng tôi. Hãy cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại này."
+          content="Mời bạn đến tham dự lễ cưới của chúng mình. Hãy cùng chúng mình chia sẻ niềm vui trong ngày trọng đại này."
         />
         <meta
           property="og:title"
-          content="Tuấn &amp; Lý | Mời Bạn Đến Chia Vui"
+          content="Tuấn &amp; Lý | Mời Bạn Đến Chung Vui"
         />
         <meta
           property="og:description"
-          content="Mời bạn đến tham dự lễ cưới của chúng tôi. Hãy cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại này."
+          content="Mời bạn đến tham dự lễ cưới của chúng mình. Hãy cùng chúng mình chia sẻ niềm vui trong ngày trọng đại này."
         />
         <meta
           property="og:image"

@@ -23,9 +23,9 @@ const ThankYouMessage = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <p className="text-gray-600 text-xl md:text-2xl leading-relaxed font-dancing-script">
-            Chúng tôi xin chân thành cảm ơn tất cả mọi người đã đến tham dự và chia sẻ niềm vui trong ngày trọng đại của chúng tôi. 
-            Những lời chúc phúc, những món quà và sự hiện diện của quý khách đã làm cho ngày cưới của chúng tôi thêm ý nghĩa và trọn vẹn. 
-            Chúng tôi sẽ mãi ghi nhớ những khoảnh khắc đẹp đẽ này và hy vọng sẽ có dịp đáp đền tấm lòng của mọi người.
+            Chúng mình xin chân thành cảm ơn tất cả mọi người đã đến tham dự và chia sẻ niềm vui trong ngày trọng đại của chúng mình. 
+            Những lời chúc phúc, những món quà và sự hiện diện của quý khách đã làm cho ngày cưới của chúng mình thêm ý nghĩa và trọn vẹn. 
+            Chúng mình sẽ mãi ghi nhớ những khoảnh khắc đẹp đẽ này và hy vọng sẽ có dịp đáp đền tấm lòng của mọi người.
           </p>
         </motion.div>
       </div>

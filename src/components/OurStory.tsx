@@ -1,6 +1,5 @@
 "use client";
 
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
@@ -16,7 +15,7 @@ const timeline: TimelineItem[] = [
   {
     title: "Lần Đầu Gặp Nhau",
     description:
-      "Ngay từ lần đầu gặp, chúng tôi đã cảm thấy có điều gì đó rất đặc biệt. Những ngày đầu tiên luôn đầy bỡ ngỡ nhưng cũng rất đáng nhớ.",
+      "Ngay từ lần đầu gặp, chúng mình đã cảm thấy có điều gì đó rất đặc biệt. Những ngày đầu tiên luôn đầy bỡ ngỡ nhưng cũng rất đáng nhớ.",
     image: "/images/timeline/1.jpg",
   },
   {
@@ -28,25 +27,25 @@ const timeline: TimelineItem[] = [
   {
     title: "Những Ngày Bình Yên",
     description:
-      "Cùng nhau trải qua từng ngày bình dị – những bữa ăn đơn giản, những buổi tối trò chuyện – chính là điều khiến chúng tôi thêm gắn bó.",
+      "Cùng nhau trải qua từng ngày bình dị – những bữa ăn đơn giản, những buổi tối trò chuyện – chính là điều khiến chúng mình thêm gắn bó.",
     image: "/images/timeline/3.jpg",
   },
   {
     title: "Cùng Nhau Trưởng Thành",
     description:
-      "Chúng tôi học cách lắng nghe, chia sẻ và đồng hành qua những thay đổi trong cuộc sống. Không phải lúc nào cũng dễ dàng, nhưng luôn có nhau.",
+      "Chúng mình học cách lắng nghe, chia sẻ và đồng hành qua những thay đổi trong cuộc sống. Không phải lúc nào cũng dễ dàng, nhưng luôn có nhau.",
     image: "/images/timeline/4.jpg",
   },
   {
     title: "Nhìn Về Phía Trước",
     description:
-      "Chúng tôi tin rằng tương lai sẽ còn nhiều điều đẹp đẽ đang chờ, miễn là cùng nhau bước tiếp, dù chậm rãi hay nhanh chóng.",
+      "Chúng mình tin rằng tương lai sẽ còn nhiều điều đẹp đẽ đang chờ, miễn là cùng nhau bước tiếp, dù chậm rãi hay nhanh chóng.",
     image: "/images/timeline/5.jpg",
   },
   {
     title: "Viết Tiếp Câu Chuyện",
     description:
-      "Không cần gì lớn lao, chỉ cần mỗi ngày vẫn chọn ở lại bên nhau – đó là cách chúng tôi viết tiếp câu chuyện của mình.",
+      "Không cần gì lớn lao, chỉ cần mỗi ngày vẫn chọn ở lại bên nhau – đó là cách chúng mình viết tiếp câu chuyện của mình.",
     image: "/images/timeline/6.jpg",
   },
 ];
@@ -58,8 +57,8 @@ export default function OurStory() {
     <section id="story" className="py-12 md:py-20 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle 
-          title="Câu Chuyện Của Chúng Tôi"
-          subtitle="Hành trình yêu thương của chúng tôi"
+          title="Câu Chuyện Của Chúng mình"
+          subtitle="Hành trình yêu thương của chúng mình"
         />
 
         <div className="relative">

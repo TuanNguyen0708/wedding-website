@@ -23,7 +23,7 @@ const events: Event[] = [
     time: '10:00 AM',
     location: 'Nhà Trai',
     address: 'Thôn Trung Phú 1, Phường Điện Minh, Thị Xã Điện Bàn, Tỉnh Quảng Nam',
-    description: 'Chúng tôi sẽ tổ chức lễ thành hôn tại nhà trai',
+    description: 'Chúng mình sẽ tổ chức lễ thành hôn tại nhà trai',
     mapUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d959.3593092685003!2d108.25819626962044!3d15.886148288932773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTXCsDUzJzEwLjEiTiAxMDjCsDE1JzMxLjgiRQ!5e0!3m2!1svi!2s!4v1746887434442!5m2!1svi!2s',
   },
   {
@@ -45,7 +45,7 @@ export default function WeddingDetails() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle 
           title="Thông Tin Lễ Cưới"
-          subtitle="Chúng tôi rất mong được gặp bạn trong ngày trọng đại"
+          subtitle="Chúng mình rất mong được gặp bạn trong ngày trọng đại"
         />
 
         <div className="grid md:grid-cols-2 gap-8">

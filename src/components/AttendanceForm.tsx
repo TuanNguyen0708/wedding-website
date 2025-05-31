@@ -66,7 +66,7 @@ export default function AttendanceForm() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="Xác Nhận Tham Dự"
-          subtitle="Chúng tôi rất mong được gặp bạn trong ngày trọng đại"
+          subtitle="Chúng mình rất mong được gặp bạn trong ngày trọng đại"
         />
 
         {submitStatus === "success" ? (
@@ -79,7 +79,7 @@ export default function AttendanceForm() {
               Cảm ơn bạn đã xác nhận tham dự!
             </h3>
             <p className="text-green-600">
-              Chúng tôi rất mong được gặp bạn trong ngày trọng đại.
+              Chúng mình rất mong được gặp bạn trong ngày trọng đại.
             </p>
           </motion.div>
         ) : (

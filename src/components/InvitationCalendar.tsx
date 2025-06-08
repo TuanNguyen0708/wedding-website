@@ -12,7 +12,7 @@ const InvitationCalendar: React.FC = () => {
   });
 
   return (
-    <section id="calendar" className="py-20 bg-gray-50">
+    <section id="calendar" className="pt-12 md:pt-20 bg-gray-50">
       <div className="container mx-auto text-center">
         <SectionTitle 
           title="Thư Mời"
@@ -25,7 +25,7 @@ const InvitationCalendar: React.FC = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-2xl text-gray-600 mb-2 font-dancing-script">Chủ Nhật</p>
+          <p className="text-2xl text-gray-600 mb-2 font-dancing-script">11h00 || Chủ Nhật</p>
           {/* Date */}
           <div className="flex justify-center items-center text-2xl mb-2 gap-2 font-dancing-script">
             <span className="text-gray-600">Ngày 6</span>
@@ -35,7 +35,7 @@ const InvitationCalendar: React.FC = () => {
 
           {/* Lunar Date */}
           <p className="text-md text-gray-500 mb-12 font-dancing-script">
-            (Tức Ngày 16 Tháng 10 Năm Giáp Thìn)
+            (Nhằm Ngày 12 Tháng 06 Năm Ất Tỵ)
           </p>
 
           {/* Calendar Grid */}

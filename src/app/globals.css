@@ -27,11 +27,11 @@ body {
 
 /* Custom Font Styles */
 .font-great-vibes {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Great Vibes';
 }
 
 .font-dancing-script {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script';
 }
 
 .font-cinzel {
@@ -39,7 +39,7 @@ body {
 }
 
 .font-alex-brush {
-  font-family: 'Alex Brush', cursive;
+  font-family: 'Alex Brush';
 }
 
 .font-playfair {

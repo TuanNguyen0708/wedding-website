@@ -41,7 +41,7 @@ export default function WeddingDetails() {
   const { scrollDirection } = useScrollAnimation();
 
   return (
-    <section id="details" className="py-20 bg-gray-50">
+    <section id="details" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle 
           title="Thông Tin Lễ Cưới"

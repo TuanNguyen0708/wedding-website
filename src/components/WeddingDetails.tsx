@@ -29,7 +29,7 @@ const events: Event[] = [
   {
     title: 'Tiệc Cưới',
     date: '06/07/2025',
-    time: '12:00 PM',
+    time: '11:00 PM',
     location: 'Nhà Hàng Tiệc Cưới Happy Palace',
     address: 'Đường Phan Khôi, TT. Vĩnh Điện, Thị Xã Điện Bàn, Tỉnh Quảng Nam',
     description: 'Tiệc cưới sẽ được tổ chức tại Nhà Hàng Tiệc Cưới Happy Palace',

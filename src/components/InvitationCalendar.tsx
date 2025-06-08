@@ -15,7 +15,7 @@ const InvitationCalendar: React.FC = () => {
     <section id="calendar" className="py-20 bg-gray-50">
       <div className="container mx-auto text-center">
         <SectionTitle 
-          title="Tiệc Mừng Lễ Vu Quy"
+          title="Thành Hôn Và Vu Quy"
           subtitle="Chúng mình rất mong được gặp bạn trong ngày trọng đại"
         />
 

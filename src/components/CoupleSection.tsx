@@ -12,7 +12,7 @@ const CoupleSection = () => {
   });
 
   return (
-    <section className="py-16 bg-white">
+    <section id="couple" className="py-16 bg-white">
       <div className="container mb-2 md:mb-3 lg:mb-4 mx-auto px-4 text-center">
         <SectionTitle title="Cặp Đôi" subtitle="Thông tin cặp đôi"/>
         <motion.div

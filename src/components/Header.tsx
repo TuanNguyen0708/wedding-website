@@ -12,9 +12,10 @@ export default function Header() {
 
   const navItems = [
     { href: "#dashboard", label: "Trang Chủ" },
-    { href: "#calendar", label: "Lịch Cưới" },
-    { href: "#gallery", label: "Ảnh Cưới" },
+    { href: "#couple", label: "Cặp Đôi" },
+    { href: "#calendar", label: "Thư mời" },
     { href: "#details", label: "Thông Tin" },
+    { href: "#gallery", label: "Ảnh Cưới" },
     { href: "#attendance", label: "Xác Nhận" },
     { href: "#guestbook", label: "Sổ Lưu bút" },
     { href: "#gift", label: "Mừng cưới" },

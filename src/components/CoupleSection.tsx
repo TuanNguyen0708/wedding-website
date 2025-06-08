@@ -22,13 +22,13 @@ const CoupleSection = () => {
           transition={{ duration: 0.8 }}
         >
 
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             {/* Groom Card */}
-            <div className="bg-white rounded-xl shadow-lg p-6 max-w-md w-full transform transition duration-500 hover:scale-105">
+            <div className="bg-white rounded-xl shadow-2xl p-6 max-w-4xl transform transition duration-500 hover:scale-105">
               <h3 className="text-2xl font-dancing-script text-gray-800 mb-4">
                 Chú Rể
               </h3>
-              <div className="relative w-48 h-60 mx-auto mb-4  overflow-hidden border-4 border-pink-200">
+              <div className="relative w-64 h-80 mx-auto mb-4  overflow-hidden border-4 border-pink-200">
                 <Image
                   src="/images/couple/1.jpg" // Placeholder image
                   alt="Chú Rể"
@@ -39,12 +39,22 @@ const CoupleSection = () => {
               <p className="text-xl font-dancing-script text-gray-700">Nguyễn Đình Tuấn</p>
             </div>
 
+            {/* Heart Image */}
+            <div className="w-48 h-48 transform ">
+            <Image
+                  src="/images/couple/heart.jpg" // Placeholder image
+                  alt="Cô Dâu"
+                  layout="fill"
+                  objectFit="cover"
+                />
+            </div>
+
             {/* Bride Card */}
-            <div className="bg-white rounded-xl shadow-lg p-6 max-w-md w-full transform transition duration-500 hover:scale-105">
+            <div className="bg-white rounded-xl shadow-2xl p-6 max-w-4xl transform transition duration-500 hover:scale-105">
               <h3 className="text-2xl font-dancing-script text-gray-800 mb-4">
                 Cô Dâu
               </h3>
-              <div className="relative w-48 h-60 mx-auto mb-4 overflow-hidden border-4 border-pink-200">
+              <div className="relative w-64 h-80 mx-auto mb-4 overflow-hidden border-4 border-pink-200">
                 <Image
                   src="/images/couple/2.jpg" // Placeholder image
                   alt="Cô Dâu"

@@ -25,7 +25,7 @@ export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
           height: '100%'
         }}
       />
-      <h2 className="font-great-vibes text-3xl md:text-5xl font-bold text-gray-900 mb-4 relative z-10">
+      <h2 className="font-dancing-script text-3xl md:text-5xl font-bold text-gray-900 mb-4 relative z-10">
         {title}
       </h2>
       {subtitle && (

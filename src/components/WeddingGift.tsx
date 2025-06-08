@@ -66,7 +66,7 @@ export default function WeddingGift() {
             >
               <div className="p-6">
                 <div className="flex flex-col items-center">
-                  <h3 className="text-3xl font-bold text-pink-600 mb-6 font-great-vibes">
+                  <h3 className="text-3xl font-bold text-pink-600 mb-6 font-dancing-script">
                     {item.name}
                   </h3>
                   <motion.button

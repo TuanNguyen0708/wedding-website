@@ -85,7 +85,7 @@ function EventCard({ event, index, scrollDirection }: {
       className="bg-white rounded-lg shadow-lg overflow-hidden"
     >
       <div className="p-6">
-        <h3 className="text-2xl font-bold text-pink-600 mb-4 font-great-vibes">
+        <h3 className="text-2xl font-bold text-pink-600 mb-4 font-dancing-script">
           {event.title}
         </h3>
         <div className="space-y-4 font-dancing-script">

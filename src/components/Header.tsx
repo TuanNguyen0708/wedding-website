@@ -45,7 +45,7 @@ export default function Header() {
             <a
               href="#"
               onClick={(e) => handleNavClick(e, "#dashboard")}
-              className={`text-2xl font-great-vibes font-bold ${
+              className={`text-2xl font-dancing-script font-bold ${
                 scrollY > 50 ? "text-pink-500" : "text-white"
               } hover:text-pink-500 transition-colors duration-300`}
             >
@@ -59,7 +59,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`text-lg font-medium transition-colors font-great-vibes ${
+                  className={`text-lg font-medium transition-colors font-dancing-script ${
                     scrollY > 50
                       ? "text-gray-900 hover:text-pink-500"
                       : "text-white hover:text-pink-500"
@@ -116,7 +116,7 @@ export default function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
-                    className={`block px-3 py-2 rounded-md text-base font-great-vibes ${
+                    className={`block px-3 py-2 rounded-md text-base font-dancing-script ${
                       scrollY > 50
                         ? "text-gray-900 hover:text-pink-500"
                         : "text-white hover:text-pink-500"

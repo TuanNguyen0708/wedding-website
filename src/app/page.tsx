@@ -9,6 +9,7 @@ import GuestbookForm from "@/components/GuestbookForm";
 import WeddingGift from "@/components/WeddingGift";
 import ThankYouMessage from "@/components/ThankYouMessage";
 import InvitationCalendar from "@/components/InvitationCalendar";
+import CoupleSection from "@/components/CoupleSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <HeartAnimation />
       <Header />
       <Hero />
+      <CoupleSection />
       <InvitationCalendar />
       <WeddingDetails />
       <Gallery />

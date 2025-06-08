@@ -145,7 +145,7 @@ export default function Gallery() {
     <section id="gallery" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle 
-          title="Khoảnh Khắc Của Chúng Mình"
+          title="Album Hình Cưới"
           subtitle="Những khoảnh khắc đáng nhớ trong hành trình yêu thương"
         />
 

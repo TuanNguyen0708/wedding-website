@@ -44,7 +44,7 @@ export default function WeddingDetails() {
     <section id="details" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle 
-          title="Thông Tin Lễ Cưới"
+          title="Địa Điểm Tổ Chức"
           subtitle="Chúng mình rất mong được gặp bạn trong ngày trọng đại"
         />
 

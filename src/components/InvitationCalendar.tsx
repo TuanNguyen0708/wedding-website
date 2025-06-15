@@ -27,24 +27,24 @@ const InvitationCalendar: React.FC = () => {
         >
           <div className="flex justify-center items-center mb-2 ">
             <div className="flex flex-col items-center px-4">
-              <p className="text-xl text-gray-700 mb-1">VÀO LÚC</p>
-              <p className="text-4xl text-red-800 font-bold">11:00</p>
+              <p className="text-base md:text-xl text-gray-700 mb-1">VÀO LÚC</p>
+              <p className="text-2xl md:text-4xl text-red-800 font-bold">11:00</p>
             </div>
-            <div className="h-20 w-px bg-gray-300 mx-4"></div> {/* Vertical separator */}
+            <div className="h-16 md:h-20 w-px bg-gray-300 mx-4"></div> {/* Vertical separator */}
             <div className="flex flex-col items-center px-4">
-              <p className="text-xl text-gray-700 mb-1">CHỦ NHẬT</p>
-              <p className="text-4xl text-red-800 font-bold">06.07.2025</p>
+              <p className="text-base md:text-xl text-gray-700 mb-1">CHỦ NHẬT</p>
+              <p className="text-2xl md:text-4xl text-red-800 font-bold">06.07.2025</p>
             </div>
           </div>
 
           {/* Lunar Date */}
-          <p className="text-md text-gray-500 mb-12">
+          <p className="text-sm md:text-md text-gray-500 mb-8 md:mb-12">
             (Nhằm Ngày 12 Tháng 06 Năm Ất Tỵ)
           </p>
 
           {/* Calendar Grid */}
           <div className="w-full">
-            <div className="relative w-full h-[600px]">
+            <div className="relative w-full aspect-[4/3]">
               <Image
                 src="/images/calendar/calendar1.jpg"
                 alt="Calendar"
@@ -53,7 +53,7 @@ const InvitationCalendar: React.FC = () => {
                 priority
               />
               <Image
-                src="/images/calendar/calendar2.jpg"
+                src="/images/calendar/calendar2-1.svg"
                 alt="Calendar"
                 fill
                 className="object-contain md:hidden"

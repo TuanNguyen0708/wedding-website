@@ -12,6 +12,7 @@ import InvitationCalendar from "@/components/InvitationCalendar";
 import CoupleSection from "@/components/CoupleSection";
 
 export default function Home() {
+  
   return (
     <main className="relative">
       <HeartAnimation />

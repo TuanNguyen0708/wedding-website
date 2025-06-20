@@ -104,19 +104,19 @@ export default function AttendedPage() {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className="hover:bg-pink-50 transition-colors duration-200"
                     >
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 font-dancing-script">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                         {index + 1}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-dancing-script">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {attendance.name}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-dancing-script">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {attendance.email}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-dancing-script">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {attendance.phone}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-dancing-script">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {formatDate(attendance.timestamp)}
                       </td>
                     </motion.tr>

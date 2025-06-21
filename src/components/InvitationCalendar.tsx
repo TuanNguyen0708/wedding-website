@@ -25,7 +25,7 @@ const InvitationCalendar: React.FC = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex justify-center items-center mb-2 ">
+          <div className="flex justify-center items-center">
             <div className="flex flex-col items-center px-4">
               <p className="text-base md:text-xl text-gray-700 mb-1">VÀO LÚC</p>
               <p className="text-2xl md:text-4xl text-red-800 font-bold">11:00</p>
@@ -38,7 +38,7 @@ const InvitationCalendar: React.FC = () => {
           </div>
 
           {/* Lunar Date */}
-          <p className="text-sm md:text-md text-gray-500 mb-8 md:mb-12">
+          <p className="text-sm md:text-md text-gray-500">
             (Nhằm Ngày 12 Tháng 06 Năm Ất Tỵ)
           </p>
 

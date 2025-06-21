@@ -2,6 +2,7 @@
 
 import { useAttendance } from "@/hooks/useFirebase";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { FaUsers, FaSpinner, FaExclamationTriangle } from "react-icons/fa";
 
 export default function AttendedPage() {
@@ -133,12 +134,12 @@ export default function AttendedPage() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-8 text-center"
         >
-          <a
+          <Link
             href="/"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 transition-colors duration-200 font-dancing-script"
           >
             ← Quay lại trang chủ
-          </a>
+          </Link>
         </motion.div>
       </div>
     </div>

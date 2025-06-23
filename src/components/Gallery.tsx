@@ -9,12 +9,6 @@ import SectionTitle from "./SectionTitle";
 
 const images = [
   {
-    src: "/images/gallery/8.jpg",
-    alt: "gallery",
-    width: 600,
-    height: 800,
-  },
-  {
     src: "/images/gallery/1.jpg",
     alt: "gallery",
     width: 800,
@@ -27,16 +21,16 @@ const images = [
     height: 800,
   },
   {
-    src: "/images/gallery/4.jpg",
+    src: "/images/gallery/3.jpg",
     alt: "gallery",
     width: 600,
     height: 800,
   },
   {
-    src: "/images/gallery/5.jpg",
+    src: "/images/gallery/4.jpg",
     alt: "gallery",
-    width: 800,
-    height: 600,
+    width: 600,
+    height: 800,
   },
   {
     src: "/images/gallery/6.jpg",
@@ -44,15 +38,8 @@ const images = [
     width: 600,
     height: 800,
   },
-    
   {
-    src: "/images/gallery/3.jpg",
-    alt: "gallery",
-    width: 800,
-    height: 600,
-  },
-  {
-    src: "/images/gallery/13.jpg",
+    src: "/images/gallery/8.jpg",
     alt: "gallery",
     width: 800,
     height: 600,
@@ -70,6 +57,12 @@ const images = [
     height: 800,
   },
   {
+    src: "/images/gallery/5.jpg",
+    alt: "gallery",
+    width: 800,
+    height: 600,
+  },
+  {
     src: "/images/gallery/11.jpg",
     alt: "gallery",
     width: 800,
@@ -81,9 +74,8 @@ const images = [
     width: 600,
     height: 800,
   },
-
   {
-    src: "/images/gallery/7.jpg",
+    src: "/images/gallery/13.jpg",
     alt: "gallery",
     width: 800,
     height: 600,
@@ -94,21 +86,18 @@ const images = [
     width: 800,
     height: 600,
   },
-  
   {
     src: "/images/gallery/14.jpg",
     alt: "gallery",
     width: 600,
     height: 800,
   },
-  
   {
     src: "/images/gallery/17.jpg",
     alt: "gallery",
     width: 800,
     height: 600,
   },
-
   {
     src: "/images/gallery/18.jpg",
     alt: "gallery",
@@ -122,12 +111,35 @@ const images = [
     height: 800,
   },
   {
+    src: "/images/gallery/7.jpg",
+    alt: "gallery",
+    width: 800,
+    height: 600,
+  },
+  {
     src: "/images/gallery/19.jpg",
     alt: "gallery",
     width: 800,
     height: 600,
   },
-  
+  {
+    src: "/images/gallery/20.jpg",
+    alt: "gallery",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/images/gallery/21.jpg",
+    alt: "gallery",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/images/gallery/22.jpg",
+    alt: "gallery",
+    width: 800,
+    height: 600,
+  },
 ];
 
 interface GalleryImage {
@@ -144,7 +156,7 @@ export default function Gallery() {
   return (
     <section id="gallery" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle 
+        <SectionTitle
           title="Album Hình Cưới"
           subtitle="Những khoảnh khắc đáng nhớ trong hành trình yêu thương"
         />
@@ -157,6 +169,7 @@ export default function Gallery() {
               index={index}
               scrollDirection={scrollDirection}
               onClick={() => setSelectedImage(index)}
+              isMobileOnly={image.src === "/images/gallery/22.jpg"}
             />
           ))}
         </div>
@@ -192,11 +205,13 @@ function GalleryItem({
   index,
   scrollDirection,
   onClick,
+  isMobileOnly = false,
 }: {
   image: GalleryImage;
   index: number;
   scrollDirection: "up" | "down";
   onClick: () => void;
+  isMobileOnly?: boolean;
 }) {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -212,7 +227,7 @@ function GalleryItem({
       initial={{ opacity: 0, y: initialY }}
       animate={inView ? { opacity: 1, y: animateY } : {}}
       transition={{ duration: 0.8, delay: index * 0.1 }}
-      className="relative mb-2 md:mb-3 lg:mb-4 overflow-hidden rounded-lg cursor-pointer hover:opacity-90 transition-opacity break-inside-avoid"
+      className={`relative mb-2 md:mb-3 lg:mb-4 overflow-hidden rounded-lg cursor-pointer hover:opacity-90 transition-opacity break-inside-avoid ${isMobileOnly ? 'block md:hidden' : ''}`}
       onClick={onClick}
     >
       <Image

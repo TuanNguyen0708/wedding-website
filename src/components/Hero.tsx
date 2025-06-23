@@ -16,10 +16,6 @@ const slides = [
   {
     image: "/images/slider/2.jpg",
     alt: "Wedding background 2"
-  },
-  {
-    image: "/images/slider/3.jpg",
-    alt: "Wedding background 3"
   }
 ];
 

@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import SectionTitle from "@/components/SectionTitle";
 
 const CoupleSection = () => {
   const [ref, inView] = useInView({
@@ -29,7 +28,7 @@ const CoupleSection = () => {
               <p className="text-xl font-dancing-script text-gray-700 mb-4">
                 Nguyễn Đình Tuấn
               </p>
-              <div className="relative w-64 h-80 mx-auto mb-4  overflow-hidden border-4 border-pink-200">
+              <div className="relative w-56 h-80 mx-auto mb-4  overflow-hidden border-4 border-pink-200">
                 <Image
                   src="/images/couple/1.jpg" // Placeholder image
                   alt="Chú Rể"
@@ -43,7 +42,7 @@ const CoupleSection = () => {
             <div className="w-48 h-48 transform ">
               <Image
                 src="/images/couple/heart.jpg" // Placeholder image
-                alt="Cô Dâu"
+                alt="heart"
                 layout="fill"
                 objectFit="cover"
               />
@@ -58,7 +57,7 @@ const CoupleSection = () => {
                 Nguyễn Thị Lý
               </p>
 
-              <div className="relative w-64 h-80 mx-auto mb-4 overflow-hidden border-4 border-pink-200">
+              <div className="relative w-56 h-80 mx-auto mb-4 overflow-hidden border-4 border-pink-200">
                 <Image
                   src="/images/couple/2.jpg" // Placeholder image
                   alt="Cô Dâu"

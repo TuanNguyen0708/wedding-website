@@ -50,7 +50,7 @@ export default function AttendedPage() {
         >
           <div className="flex items-center justify-center mb-4">
             <FaUsers className="text-4xl text-pink-500 mr-4" />
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 font-dancing-script">
+            <h1 className="text-xl md:text-2xl font-bold text-gray-900 font-dancing-script">
               Danh Sách Khách Tham Dự
             </h1>
           </div>

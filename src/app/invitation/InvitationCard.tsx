@@ -39,7 +39,7 @@ export default function InvitationCard({
       />
       {to && (
         <p
-          className={`absolute font-dancing-script text-base md:text-xl text-red-800 transform ${textPositionClass}`}
+          className={`absolute font-great-vibes text-base md:text-xl text-red-800 transform ${textPositionClass}`}
         >
           {snakeToTitleCase(to)}
         </p>

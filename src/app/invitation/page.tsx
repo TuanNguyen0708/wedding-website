@@ -17,7 +17,7 @@ export default function Invitation() {
           Save The Date
         </h1>
         <p className="text-lg md:text-3xl text-gray-600 mt-2 font-dancing-script">
-          Trân trọng kính mời bạn đến chung vui cùng gia đình chúng tôi.
+          Trân trọng kính mời bạn đến chung vui cùng chúng mình.
         </p>
       </motion.div>
       <motion.div

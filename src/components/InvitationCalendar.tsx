@@ -38,7 +38,7 @@ const InvitationCalendar: React.FC = () => {
           </div>
 
           {/* Lunar Date */}
-          <p className="text-sm md:text-md text-gray-500">
+          <p className="text-sm md:text-md text-gray-500 mb-5 md:mb-0">
             (Nhằm Ngày 12 Tháng 06 Năm Ất Tỵ)
           </p>
 

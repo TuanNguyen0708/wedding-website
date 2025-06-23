@@ -30,7 +30,7 @@ const CoupleSection = () => {
               </p>
               <div className="relative w-56 h-80 mx-auto mb-4  overflow-hidden border-4 border-pink-200">
                 <Image
-                  src="/images/couple/1.jpg" // Placeholder image
+                  src="/images/couple/1.jpg?v=1.0.0" // Placeholder image
                   alt="Chú Rể"
                   layout="fill"
                   objectFit="cover"
@@ -59,7 +59,7 @@ const CoupleSection = () => {
 
               <div className="relative w-56 h-80 mx-auto mb-4 overflow-hidden border-4 border-pink-200">
                 <Image
-                  src="/images/couple/2.jpg" // Placeholder image
+                  src="/images/couple/2.jpg?v=1.0.0" // Placeholder image
                   alt="Cô Dâu"
                   layout="fill"
                   objectFit="cover"

@@ -5,6 +5,9 @@ cd /root/wedding-website || exit
 echo "📥 Pulling latest code..."
 git pull origin master
 
+echo "🧹 Cleaning Next.js cache..."
+rm -rf .next/cache
+
 echo "📦 Installing dependencies..."
 npm install
 

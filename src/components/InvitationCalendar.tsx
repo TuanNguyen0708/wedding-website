@@ -12,11 +12,11 @@ const InvitationCalendar: React.FC = () => {
   });
 
   return (
-    <section id="calendar" className="pt-12 md:pt-20 bg-gray-50">
+    <section id="calendar" className="pt-10 md:pt-20 bg-gray-50">
       <div className="container mx-auto text-center">
         <SectionTitle 
           title="Thư Mời"
-          subtitle="Tham dự Lễ Cưới Của Tuấn & Lý"
+          subtitle="Tham dự lễ cưới của Tuấn & Lý"
         />
 
         <motion.div
@@ -44,9 +44,9 @@ const InvitationCalendar: React.FC = () => {
 
           {/* Calendar Grid */}
           <div className="w-full">
-            <div className="relative w-full aspect-[4/3]">
+            <div className="relative w-full aspect-[3/2]">
               <Image
-                src="/images/calendar/calendar1.jpg"
+                src="/images/calendar/calendar.jpg?v=1.0.0"
                 alt="Calendar"
                 fill
                 className="object-contain hidden md:block"

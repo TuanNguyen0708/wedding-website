@@ -99,7 +99,7 @@ const images = [
     height: 600,
   },
   {
-    src: "/images/gallery/18.jpg?v=1.0.0",
+    src: "/images/gallery/18.jpg?v=1.0.1",
     alt: "gallery",
     width: 600,
     height: 800,
@@ -117,7 +117,7 @@ const images = [
     height: 600,
   },
   {
-    src: "/images/gallery/19.jpg?v=1.0.0",
+    src: "/images/gallery/19.jpg?v=1.0.1",
     alt: "gallery",
     width: 800,
     height: 600,

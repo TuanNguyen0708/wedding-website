@@ -23,8 +23,8 @@ export default function InvitationCard({
 
   const snakeToTitleCase = (str: string) => {
     return str
-      ?.split("-")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    ?.split("-")
+      .map((word) =>  word === "@" ? "+" : word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ");
   }
 

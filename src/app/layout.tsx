@@ -98,6 +98,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white">
         <ClientLayout>{children}</ClientLayout>
+          <script src="https://nextdev.akabot.io/chat-widget/bootstrap.js" data-widget-id="00000000-0000-0000-0000-000000000000" async defer ></script>
       </body>
     </html>
   );

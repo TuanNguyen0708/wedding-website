@@ -72,7 +72,7 @@ export default function RootLayout({
       className={`${playfair.variable} ${cormorant.variable} ${greatVibes.variable} ${dancingScript.variable} ${cinzel.variable} ${alexBrush.variable}`}
     >
       <head>
-        <script src="https://nextdev.akabot.io/chat-widget/bootstrap.js" data-widget="eyJ3aWRnZXRJZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMCIsInRlbmFudElkIjoiZGRlOTNiNDAtZDFiYS00MDI5LTg5NmMtNDc3ZTg4MWI1YmI3In0" async defer ></script>
+        <script src="https://nextdev.akabot.io/chat-widget/bootstrap.js" data-widget="eyJ3aWRnZXRJZCI6IjEwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMCIsInRlbmFudElkIjoiZGRlOTNiNDAtZDFiYS00MDI5LTg5NmMtNDc3ZTg4MWI1YmI3In0" async defer></script>
         <meta property="fb:app_id" content="668117552682185" />
         <title>Tuấn &amp; Lý | Mời Bạn Đến Chung Vui</title>
         <meta
